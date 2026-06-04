@@ -1,0 +1,177 @@
+﻿variable,group,description,modeling_use,caveat
+month,demand_base_or_existing_proxy,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,
+year,demand_base_or_existing_proxy,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,
+data_status,demand_base_or_existing_proxy,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,
+alcoholic_beer_total_proxy_kl,demand_base_or_existing_proxy,전체 알코올 맥주 월별 수요 proxy(kL). 공식 연간 apparent market을 월별 수입맥주/검색량으로 분해.,전체 알코올 맥주 월별 수요 proxy(kL). 공식 연간 apparent market을 월별 수입맥주/검색량으로 분해.,실제 내부 판매량이 아니라 공개자료 기반 proxy 또는 생성값.
+regular_beer_excluding_low_calorie_proxy_kl,demand_base_or_existing_proxy,저칼로리/라이트를 제외한 일반 맥주 월별 수요 proxy(kL).,저칼로리/라이트를 제외한 일반 맥주 월별 수요 proxy(kL).,실제 내부 판매량이 아니라 공개자료 기반 proxy 또는 생성값.
+low_calorie_light_beer_proxy_kl,demand_base_or_existing_proxy,저칼로리/라이트 맥주 월별 수요 proxy(kL). Cass Light 공개 점유율과 성장 보도를 반영.,저칼로리/라이트 맥주 월별 수요 proxy(kL). Cass Light 공개 점유율과 성장 보도를 반영.,실제 내부 판매량이 아니라 공개자료 기반 proxy 또는 생성값.
+nonalcoholic_beer_proxy_kl,demand_base_or_existing_proxy,논알콜/무알콜 맥주 월별 수요 proxy(kL). 시장규모 금액과 검색량 기반 생성.,논알콜/무알콜 맥주 월별 수요 proxy(kL). 시장규모 금액과 검색량 기반 생성.,실제 내부 판매량이 아니라 공개자료 기반 proxy 또는 생성값.
+nonalcoholic_beer_market_value_proxy_million_krw,demand_base_or_existing_proxy,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,실제 내부 판매량이 아니라 공개자료 기반 proxy 또는 생성값.
+cass_fresh_proxy_kl,demand_base_or_existing_proxy,Cass Fresh 월별 수요 proxy(kL). 실제 판매량이 아니라 공개 점유율 기반 시나리오 값.,Cass Fresh 월별 수요 proxy(kL). 실제 판매량이 아니라 공개 점유율 기반 시나리오 값.,실제 내부 판매량이 아니라 공개자료 기반 proxy 또는 생성값.
+cass_light_proxy_kl,demand_base_or_existing_proxy,Cass Light 월별 수요 proxy(kL). 실제 판매량이 아니라 공개 점유율 기반 시나리오 값.,Cass Light 월별 수요 proxy(kL). 실제 판매량이 아니라 공개 점유율 기반 시나리오 값.,실제 내부 판매량이 아니라 공개자료 기반 proxy 또는 생성값.
+cass_0_0_or_all_zero_proxy_kl,demand_base_or_existing_proxy,Cass 0.0/All Zero 월별 수요 proxy(kL). 무·비알코올 시장 내 Cass 계열 share 가정.,Cass 0.0/All Zero 월별 수요 proxy(kL). 무·비알코올 시장 내 Cass 계열 share 가정.,실제 내부 판매량이 아니라 공개자료 기반 proxy 또는 생성값.
+alcoholic_total_annual_anchor_kl,demand_base_or_existing_proxy,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,
+low_calorie_share_assumption,demand_base_or_existing_proxy,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,
+cass_fresh_share_assumption,demand_base_or_existing_proxy,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,
+cass_light_share_assumption,demand_base_or_existing_proxy,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,
+cass_zero_share_of_na_assumption,demand_base_or_existing_proxy,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,
+monthly_weight_total_beer,demand_base_or_existing_proxy,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,
+monthly_weight_low_calorie,demand_base_or_existing_proxy,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,
+monthly_weight_nonalc,demand_base_or_existing_proxy,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,
+hs2203_import_kg_actual,demand_base_or_existing_proxy,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,
+hs2203_export_kg_actual,demand_base_or_existing_proxy,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,
+google_trends_beer,demand_base_or_existing_proxy,Google Trends 검색 관심도. 절대 검색량이 아니라 상대 index.,Google Trends 검색 관심도. 절대 검색량이 아니라 상대 index.,
+google_trends_imported_beer,demand_base_or_existing_proxy,Google Trends 검색 관심도. 절대 검색량이 아니라 상대 index.,Google Trends 검색 관심도. 절대 검색량이 아니라 상대 index.,
+google_trends_nonalc_beer,demand_base_or_existing_proxy,Google Trends 검색 관심도. 절대 검색량이 아니라 상대 index.,Google Trends 검색 관심도. 절대 검색량이 아니라 상대 index.,
+google_trends_cass_beer,demand_base_or_existing_proxy,Google Trends 검색 관심도. 절대 검색량이 아니라 상대 index.,Google Trends 검색 관심도. 절대 검색량이 아니라 상대 index.,
+google_trends_cass_light,demand_base_or_existing_proxy,Google Trends 검색 관심도. 절대 검색량이 아니라 상대 index.,Google Trends 검색 관심도. 절대 검색량이 아니라 상대 index.,
+google_trends_cass_zero_terms,demand_base_or_existing_proxy,Google Trends 검색 관심도. 절대 검색량이 아니라 상대 index.,Google Trends 검색 관심도. 절대 검색량이 아니라 상대 index.,
+generation_formula_note,demand_base_or_existing_proxy,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,
+seoul_avg_temp_c,demand_base_or_existing_proxy,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,
+seoul_avg_max_temp_c,demand_base_or_existing_proxy,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,
+seoul_precipitation_mm,demand_base_or_existing_proxy,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,
+seoul_hot_days_30c,demand_base_or_existing_proxy,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,
+seoul_rain_days,demand_base_or_existing_proxy,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,
+days_in_month,demand_base_or_existing_proxy,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,
+weekend_days,demand_base_or_existing_proxy,공휴일/주말/연휴 변수. 여행·모임·외식 수요와 유통 영업일 효과 proxy.,공휴일/주말/연휴 변수. 여행·모임·외식 수요와 유통 영업일 효과 proxy.,
+public_holiday_count_kr_approx,demand_base_or_existing_proxy,공휴일/주말/연휴 변수. 여행·모임·외식 수요와 유통 영업일 효과 proxy.,공휴일/주말/연휴 변수. 여행·모임·외식 수요와 유통 영업일 효과 proxy.,
+is_summer_peak_jun_aug,demand_base_or_existing_proxy,계절성 파생 변수.,계절성 파생 변수.,
+is_kbo_regular_season,demand_base_or_existing_proxy,KBO 경기/시즌 변수. 야구 관람·치맥·야식/외식 수요 proxy.,KBO 경기/시즌 변수. 야구 관람·치맥·야식/외식 수요 proxy.,
+weather__year,weather,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+month_num,weather,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+quarter,weather,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+weather__days_in_month,weather,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+month_sin_annual,weather,계절성 파생 변수.,계절성 파생 변수.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+month_cos_annual,weather,계절성 파생 변수.,계절성 파생 변수.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+is_winter_dec_feb,weather,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+is_spring_mar_may,weather,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+is_summer_jun_aug,weather,계절성 파생 변수.,계절성 파생 변수.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+is_autumn_sep_nov,weather,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+is_summer_peak_jul_aug,weather,계절성 파생 변수.,계절성 파생 변수.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+is_year_end_nov_dec,weather,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+is_school_vacation_approx_jan_feb_jul_aug,weather,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+weather__seoul_avg_temp_c,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+weather__seoul_avg_max_temp_c,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_avg_min_temp_c,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_month_max_temp_c,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_month_min_temp_c,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_avg_apparent_temp_c,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_avg_max_apparent_temp_c,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_avg_min_apparent_temp_c,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_month_max_apparent_temp_c,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+weather__seoul_precipitation_mm,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_rain_mm,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_snowfall_cm,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_precipitation_hours,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_wet_days_0_1mm,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_rain_days_1mm,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_heavy_rain_days_30mm,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_very_heavy_rain_days_80mm,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_dry_days_lt1mm,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+weather__seoul_hot_days_30c,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_heatwave_warning_days_33c,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_tropical_nights_25c,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_freezing_days_min_lt0c,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_ice_days_max_lt0c,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_cold_wave_days_min_le_minus12c,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_apparent_heat_days_32c,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_cooling_degree_days_18c,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_heating_degree_days_18c,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_cooling_degree_days_26c,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_wind_speed_mean_kmh_daily,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_wind_speed_max_kmh_daily,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_wind_gust_max_kmh,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_shortwave_radiation_mj_m2_sum,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_shortwave_radiation_mj_m2_daily_mean,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_daylight_hours_sum,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_sunshine_hours_sum,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_relative_humidity_mean_pct,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_relative_humidity_min_pct,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_relative_humidity_max_pct,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_hourly_temp_p95_c,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_hourly_apparent_temp_p95_c,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_hourly_wind_speed_mean_kmh,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_hourly_wind_speed_p95_kmh,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_air_no2_ppm,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_air_o3_ppm,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_air_co_ppm,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_air_so2_ppm,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_pm10_ug_m3,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_pm25_ug_m3,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_pm10_month_avg_bad_flag_gt80,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+seoul_pm25_month_avg_bad_flag_gt35,weather,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,서울 기준 날씨/환경 변수. 맥주 수요의 계절성·야외활동·체감더위/대기질 효과를 설명.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+air_quality_station_nm,weather,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+air_quality_missing_flag,weather,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+data_source_weather,weather,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+data_source_air_quality,weather,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,Open-Meteo 격자형 archive 및 서울 중구 대기질 proxy. 공식 ASOS/전국 평균 아님.
+events__year,events,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+events__days_in_month,events,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+events__weekend_days,events,공휴일/주말/연휴 변수. 여행·모임·외식 수요와 유통 영업일 효과 proxy.,공휴일/주말/연휴 변수. 여행·모임·외식 수요와 유통 영업일 효과 proxy.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+public_holiday_count_kr,events,공휴일/주말/연휴 변수. 여행·모임·외식 수요와 유통 영업일 효과 proxy.,공휴일/주말/연휴 변수. 여행·모임·외식 수요와 유통 영업일 효과 proxy.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+public_holiday_weekday_count_kr,events,공휴일/주말/연휴 변수. 여행·모임·외식 수요와 유통 영업일 효과 proxy.,공휴일/주말/연휴 변수. 여행·모임·외식 수요와 유통 영업일 효과 proxy.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+nonworking_days_weekend_or_holiday,events,공휴일/주말/연휴 변수. 여행·모임·외식 수요와 유통 영업일 효과 proxy.,공휴일/주말/연휴 변수. 여행·모임·외식 수요와 유통 영업일 효과 proxy.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+longest_consecutive_nonwork_days,events,공휴일/주말/연휴 변수. 여행·모임·외식 수요와 유통 영업일 효과 proxy.,공휴일/주말/연휴 변수. 여행·모임·외식 수요와 유통 영업일 효과 proxy.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+long_weekend_3plus_days_in_month,events,공휴일/주말/연휴 변수. 여행·모임·외식 수요와 유통 영업일 효과 proxy.,공휴일/주말/연휴 변수. 여행·모임·외식 수요와 유통 영업일 효과 proxy.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+holiday_names_kr,events,공휴일/주말/연휴 변수. 여행·모임·외식 수요와 유통 영업일 효과 proxy.,공휴일/주말/연휴 변수. 여행·모임·외식 수요와 유통 영업일 효과 proxy.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+events__is_summer_peak_jun_aug,events,계절성 파생 변수.,계절성 파생 변수.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+is_vacation_peak_jul_aug,events,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+kbo_regular_games,events,KBO 경기/시즌 변수. 야구 관람·치맥·야식/외식 수요 proxy.,KBO 경기/시즌 변수. 야구 관람·치맥·야식/외식 수요 proxy.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+kbo_regular_game_days,events,KBO 경기/시즌 변수. 야구 관람·치맥·야식/외식 수요 proxy.,KBO 경기/시즌 변수. 야구 관람·치맥·야식/외식 수요 proxy.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+events__is_kbo_regular_season,events,KBO 경기/시즌 변수. 야구 관람·치맥·야식/외식 수요 proxy.,KBO 경기/시즌 변수. 야구 관람·치맥·야식/외식 수요 proxy.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+kbo_postseason_games,events,KBO 경기/시즌 변수. 야구 관람·치맥·야식/외식 수요 proxy.,KBO 경기/시즌 변수. 야구 관람·치맥·야식/외식 수요 proxy.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+kbo_postseason_game_days,events,KBO 경기/시즌 변수. 야구 관람·치맥·야식/외식 수요 proxy.,KBO 경기/시즌 변수. 야구 관람·치맥·야식/외식 수요 proxy.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+is_kbo_postseason,events,KBO 경기/시즌 변수. 야구 관람·치맥·야식/외식 수요 proxy.,KBO 경기/시즌 변수. 야구 관람·치맥·야식/외식 수요 proxy.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+sports_major_event_days,events,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+is_sports_major_event_month,events,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+olympics_days,events,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+fifa_world_cup_days,events,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+asian_games_days,events,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+sports_major_event_names,events,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+regional_festival_count_planned,events,지역축제/맥주축제 변수. 야외 행사와 관광·모임 수요 proxy.,지역축제/맥주축제 변수. 야외 행사와 관광·모임 수요 proxy.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+regional_festival_days_est,events,지역축제/맥주축제 변수. 야외 행사와 관광·모임 수요 proxy.,지역축제/맥주축제 변수. 야외 행사와 관광·모임 수요 proxy.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+regional_festival_offline_or_hybrid_count,events,지역축제/맥주축제 변수. 야외 행사와 관광·모임 수요 proxy.,지역축제/맥주축제 변수. 야외 행사와 관광·모임 수요 proxy.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+regional_festival_offline_or_hybrid_days_est,events,지역축제/맥주축제 변수. 야외 행사와 관광·모임 수요 proxy.,지역축제/맥주축제 변수. 야외 행사와 관광·모임 수요 proxy.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+regional_festival_vague_date_count,events,지역축제/맥주축제 변수. 야외 행사와 관광·모임 수요 proxy.,지역축제/맥주축제 변수. 야외 행사와 관광·모임 수요 proxy.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+beer_festival_count_keyword,events,지역축제/맥주축제 변수. 야외 행사와 관광·모임 수요 proxy.,지역축제/맥주축제 변수. 야외 행사와 관광·모임 수요 proxy.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+beer_festival_days_est_keyword,events,지역축제/맥주축제 변수. 야외 행사와 관광·모임 수요 proxy.,지역축제/맥주축제 변수. 야외 행사와 관광·모임 수요 proxy.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+beer_festival_offline_or_hybrid_count_keyword,events,지역축제/맥주축제 변수. 야외 행사와 관광·모임 수요 proxy.,지역축제/맥주축제 변수. 야외 행사와 관광·모임 수요 proxy.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+events_data_source_note,events,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,모델 입력 후보 변수. 상세 출처는 그룹별 설명 문서 참고.,축제/스포츠/공휴일 count는 공개자료/규칙 기반. 일부 축제는 계획 자료라 취소·변경 가능.
+news_beer_general_count,news,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,기사 수는 Google News RSS 검색결과 count이며 전체 뉴스량이 아님. 키워드 감성은 제목 기반 단순 proxy.
+news_cass_ob_count,news,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,기사 수는 Google News RSS 검색결과 count이며 전체 뉴스량이 아님. 키워드 감성은 제목 기반 단순 proxy.
+news_nonalc_count,news,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,기사 수는 Google News RSS 검색결과 count이며 전체 뉴스량이 아님. 키워드 감성은 제목 기반 단순 proxy.
+news_weather_demand_count,news,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,기사 수는 Google News RSS 검색결과 count이며 전체 뉴스량이 아님. 키워드 감성은 제목 기반 단순 proxy.
+news_festival_beer_count,news,지역축제/맥주축제 변수. 야외 행사와 관광·모임 수요 proxy.,지역축제/맥주축제 변수. 야외 행사와 관광·모임 수요 proxy.,기사 수는 Google News RSS 검색결과 count이며 전체 뉴스량이 아님. 키워드 감성은 제목 기반 단순 proxy.
+news_regulation_health_price_count,news,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,기사 수는 Google News RSS 검색결과 count이며 전체 뉴스량이 아님. 키워드 감성은 제목 기반 단순 proxy.
+news_beer_general_positive_keyword_count,news,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,기사 수는 Google News RSS 검색결과 count이며 전체 뉴스량이 아님. 키워드 감성은 제목 기반 단순 proxy.
+news_beer_general_negative_keyword_count,news,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,기사 수는 Google News RSS 검색결과 count이며 전체 뉴스량이 아님. 키워드 감성은 제목 기반 단순 proxy.
+news_cass_ob_positive_keyword_count,news,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,기사 수는 Google News RSS 검색결과 count이며 전체 뉴스량이 아님. 키워드 감성은 제목 기반 단순 proxy.
+news_cass_ob_negative_keyword_count,news,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,기사 수는 Google News RSS 검색결과 count이며 전체 뉴스량이 아님. 키워드 감성은 제목 기반 단순 proxy.
+news_nonalc_positive_keyword_count,news,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,기사 수는 Google News RSS 검색결과 count이며 전체 뉴스량이 아님. 키워드 감성은 제목 기반 단순 proxy.
+news_nonalc_negative_keyword_count,news,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,기사 수는 Google News RSS 검색결과 count이며 전체 뉴스량이 아님. 키워드 감성은 제목 기반 단순 proxy.
+news_weather_demand_positive_keyword_count,news,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,기사 수는 Google News RSS 검색결과 count이며 전체 뉴스량이 아님. 키워드 감성은 제목 기반 단순 proxy.
+news_weather_demand_negative_keyword_count,news,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,기사 수는 Google News RSS 검색결과 count이며 전체 뉴스량이 아님. 키워드 감성은 제목 기반 단순 proxy.
+news_festival_beer_positive_keyword_count,news,지역축제/맥주축제 변수. 야외 행사와 관광·모임 수요 proxy.,지역축제/맥주축제 변수. 야외 행사와 관광·모임 수요 proxy.,기사 수는 Google News RSS 검색결과 count이며 전체 뉴스량이 아님. 키워드 감성은 제목 기반 단순 proxy.
+news_festival_beer_negative_keyword_count,news,지역축제/맥주축제 변수. 야외 행사와 관광·모임 수요 proxy.,지역축제/맥주축제 변수. 야외 행사와 관광·모임 수요 proxy.,기사 수는 Google News RSS 검색결과 count이며 전체 뉴스량이 아님. 키워드 감성은 제목 기반 단순 proxy.
+news_regulation_health_price_positive_keyword_count,news,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,기사 수는 Google News RSS 검색결과 count이며 전체 뉴스량이 아님. 키워드 감성은 제목 기반 단순 proxy.
+news_regulation_health_price_negative_keyword_count,news,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,기사 수는 Google News RSS 검색결과 count이며 전체 뉴스량이 아님. 키워드 감성은 제목 기반 단순 proxy.
+news_health_trend_title_count,news,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,기사 수는 Google News RSS 검색결과 count이며 전체 뉴스량이 아님. 키워드 감성은 제목 기반 단순 proxy.
+news_price_regulation_title_count,news,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,기사 수는 Google News RSS 검색결과 count이며 전체 뉴스량이 아님. 키워드 감성은 제목 기반 단순 proxy.
+news_weather_title_count,news,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,기사 수는 Google News RSS 검색결과 count이며 전체 뉴스량이 아님. 키워드 감성은 제목 기반 단순 proxy.
+news_event_title_count,news,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,기사 수는 Google News RSS 검색결과 count이며 전체 뉴스량이 아님. 키워드 감성은 제목 기반 단순 proxy.
+news_total_index,news,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,기사 수는 Google News RSS 검색결과 count이며 전체 뉴스량이 아님. 키워드 감성은 제목 기반 단순 proxy.
+news_sentiment_balance_proxy,news,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,기사 수는 Google News RSS 검색결과 count이며 전체 뉴스량이 아님. 키워드 감성은 제목 기반 단순 proxy.
+news_data_source_note,news,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,Google News RSS 기사 수 또는 제목 키워드 count. 비정형 이슈·관심도·긍부정 proxy.,기사 수는 Google News RSS 검색결과 count이며 전체 뉴스량이 아님. 키워드 감성은 제목 기반 단순 proxy.
+korea_cpi_generated_index_2020_01_100,econ,가격/물가/수입단가/가격관심도 변수. 가격 민감도와 비용 압력 proxy.,가격/물가/수입단가/가격관심도 변수. 가격 민감도와 비용 압력 proxy.,일부 CPI는 연간 anchor 기반 생성값. 주류 전용 CPI 아님.
+korea_cpi_generated_yoy_pct,econ,가격/물가/수입단가/가격관심도 변수. 가격 민감도와 비용 압력 proxy.,가격/물가/수입단가/가격관심도 변수. 가격 민감도와 비용 압력 proxy.,일부 CPI는 연간 anchor 기반 생성값. 주류 전용 CPI 아님.
+korea_annual_cpi_inflation_anchor_pct,econ,가격/물가/수입단가/가격관심도 변수. 가격 민감도와 비용 압력 proxy.,가격/물가/수입단가/가격관심도 변수. 가격 민감도와 비용 압력 proxy.,일부 CPI는 연간 anchor 기반 생성값. 주류 전용 CPI 아님.
+imported_beer_unit_value_usd_per_kg,econ,가격/물가/수입단가/가격관심도 변수. 가격 민감도와 비용 압력 proxy.,가격/물가/수입단가/가격관심도 변수. 가격 민감도와 비용 압력 proxy.,일부 CPI는 연간 anchor 기반 생성값. 주류 전용 CPI 아님.
+imported_beer_unit_value_yoy_pct,econ,가격/물가/수입단가/가격관심도 변수. 가격 민감도와 비용 압력 proxy.,가격/물가/수입단가/가격관심도 변수. 가격 민감도와 비용 압력 proxy.,일부 CPI는 연간 anchor 기반 생성값. 주류 전용 CPI 아님.
+google_trends_inflation_m物가,econ,Google Trends 검색 관심도. 절대 검색량이 아니라 상대 index.,Google Trends 검색 관심도. 절대 검색량이 아니라 상대 index.,일부 CPI는 연간 anchor 기반 생성값. 주류 전용 CPI 아님.
+google_trends_dining_price,econ,Google Trends 검색 관심도. 절대 검색량이 아니라 상대 index.,Google Trends 검색 관심도. 절대 검색량이 아니라 상대 index.,일부 CPI는 연간 anchor 기반 생성값. 주류 전용 CPI 아님.
+google_trends_beer_price,econ,Google Trends 검색 관심도. 절대 검색량이 아니라 상대 index.,Google Trends 검색 관심도. 절대 검색량이 아니라 상대 index.,일부 CPI는 연간 anchor 기반 생성값. 주류 전용 CPI 아님.
+google_trends_alcohol_price,econ,Google Trends 검색 관심도. 절대 검색량이 아니라 상대 index.,Google Trends 검색 관심도. 절대 검색량이 아니라 상대 index.,일부 CPI는 연간 anchor 기반 생성값. 주류 전용 CPI 아님.
+google_trends_consumer_sentiment,econ,Google Trends 검색 관심도. 절대 검색량이 아니라 상대 index.,Google Trends 검색 관심도. 절대 검색량이 아니라 상대 index.,일부 CPI는 연간 anchor 기반 생성값. 주류 전용 CPI 아님.
+price_pressure_search_index,econ,가격/물가/수입단가/가격관심도 변수. 가격 민감도와 비용 압력 proxy.,가격/물가/수입단가/가격관심도 변수. 가격 민감도와 비용 압력 proxy.,일부 CPI는 연간 anchor 기반 생성값. 주류 전용 CPI 아님.
+ob_major_price_increase_event_dummy,econ,가격/물가/수입단가/가격관심도 변수. 가격 민감도와 비용 압력 proxy.,가격/물가/수입단가/가격관심도 변수. 가격 민감도와 비용 압력 proxy.,일부 CPI는 연간 anchor 기반 생성값. 주류 전용 CPI 아님.
+months_since_ob_price_event_cap6,econ,가격/물가/수입단가/가격관심도 변수. 가격 민감도와 비용 압력 proxy.,가격/물가/수입단가/가격관심도 변수. 가격 민감도와 비용 압력 proxy.,일부 CPI는 연간 anchor 기반 생성값. 주류 전용 CPI 아님.
+economic_price_data_source_note,econ,가격/물가/수입단가/가격관심도 변수. 가격 민감도와 비용 압력 proxy.,가격/물가/수입단가/가격관심도 변수. 가격 민감도와 비용 압력 proxy.,일부 CPI는 연간 anchor 기반 생성값. 주류 전용 CPI 아님.

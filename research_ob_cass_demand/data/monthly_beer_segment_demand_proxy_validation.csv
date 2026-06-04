@@ -1,0 +1,7 @@
+﻿year,status,annual_anchor_alcoholic_beer_kl,sum_monthly_alcoholic_beer_proxy_kl,sum_monthly_regular_beer_proxy_kl,sum_monthly_low_calorie_beer_proxy_kl,sum_monthly_nonalc_beer_proxy_kl,sum_monthly_nonalc_value_million_krw,sum_cass_fresh_proxy_kl,sum_cass_light_proxy_kl,sum_cass_zero_proxy_kl
+2020,official-constrained,1735600.0,1735599.9,1693945.5,41654.3,6999.7,27999.8,711596.1,41654.3,1399.7
+2021,official-constrained,1700900.0,1700899.9,1658377.5,42522.5,10375.2,41500.2,714377.8,42522.5,2905.2
+2022,official-constrained,1824200.0,1824200.1,1774946.7,49253.3,12999.8,51999.9,775284.9,49253.3,4419.8
+2023,official-constrained,1822000.0,1822000.0,1767339.9,54660.0,16099.7,64399.7,770705.8,54660.0,5635.3
+2024,official-constrained,1759100.0,1759100.0,1695772.4,63327.6,17499.8,69999.6,774003.9,59809.5,5249.7
+2025,generated/provisional,1899828.0,1899828.1,1810536.1,89291.9,20000.0,80000.0,927115.9,93091.6,5000.0

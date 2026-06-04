@@ -1,0 +1,50 @@
+Milestone 3: Risk Scenario Analysis & AI Opportunity Identification
+Target Supply Chain: OB Brewery - Cass Family Brewing Operations | Team 4: 나태양, 유재호, 윤채리, 이대희, 최지안
+1. Core Risk Logic
+This milestone identifies the main operational risks in the Cass brewing supply chain and links them to the process model developed in M1, M2, and the Proposal Report. Because OB Brewery internal tank-level data are not public, the numbers below are used as a normalized structural model, not as measured plant data. One fermentation tank is treated as one standard batch-equivalent, and all tanks are assumed to have the same batch capacity. This assumption keeps the calculation transparent and allows the formulas to be updated later with actual company data.
+The dominant constraint is fermentation. Fermentation requires biological residence time and cannot be accelerated through ordinary overtime. In the baseline model, production load is lambda = 1.20 batches/day. With 20 fermentation tanks and a 14-day fermentation time, capacity is C0 = 20 / 14 = 1.43 batches/day, so utilization is rho0 = 1.20 / 1.43 = 84%. This high utilization explains why small shocks can create large downstream consequences.
+Category
+Risk factor
+Location (M2 mapping)
+Propagation path
+Primary impact
+Process
+Fermentation batch contamination or failure
+Fermentation tanks — bottleneck, 84% util.
+Batch scrap → 17-day tank occupancy unrecoverable → cascading delay across shared SKUs
+Stockouts, brand-switching loss
+Supply
+Raw-material (malt, hops) price/availability volatility
+Upstream suppliers → Mashing
+Climate / geopolitical shock → procurement delay → schedule slippage
+COGS inflation, margin compression
+Demand
+Sharp swings (heat waves, sports events, SKU substitution)
+Retail channels → HQ forecasting
+17-day lead time blocks reactive adjustment → stockout or excess obsolete inventory
+Lost-sales cost, freshness write-offs
+Coordination
+Bullwhip effect from information distortion
+Wholesaler ↔ HQ information flow
+Local retail spike → wholesaler over-orders → HQ over-produces → DC inventory glut
+Working-capital pressure, freshness loss
+Environmental
+Regulatory shifts (excise tax, labeling)
+External, propagates inward
+Rule change → forced repricing or portfolio rebalancing
+Strategic re-planning cost
+2. Scenario 1 - Peak-Season Fermentation Tank Contamination
+Trigger. In early July, two of twenty Cass Fresh fermentation tanks are contaminated by wild yeast. The affected batches are scrapped, and the tanks require CIP cleaning before reuse.
+Calculation and interpretation. The hidden assumptions are now made explicit: all fermentation tanks have identical standard batch capacity, and the baseline production load remains 1.20 batches/day during the shock. Before the disruption, capacity is C0 = 20 tanks / 14 days = 1.43 batches/day, and utilization is 84%. After two tanks are unavailable, effective capacity becomes C1 = 18 / 14 = 1.29 batches/day. Utilization rises to rho1 = 1.20 / 1.29 = 93%.
+Using Little’s Law, L = lambda x W, with W = 17 days for fermentation plus maturation, the baseline pipeline inventory is L = 1.20 x 17 = 20.4 batch-equivalents. The two contaminated tanks represent two missing batch-equivalents, or 2 / 1.20 = 1.7 days of normal output. The 34 tank-days figure means that two batches have already consumed 17 days of residence time each before becoming unusable. Therefore, the impact is not 34 lost batches; it is two lost batch-equivalents plus a severe utilization shock. This clarification directly addresses why the original Little’s Law calculation could look under-explained.
+Operational impact and response. The system moves from an already high 84% utilization level to roughly 93%, where queueing delay grows nonlinearly. Since Cass Fresh, Cass Light, and Cass 0.0 share fermentation capacity, the shock also disturbs SKU allocation. The response is to (1) lower peak-season fermentation utilization toward 75-80% to preserve slack, (2) position buffers as finished-goods safety stock rather than pre-fermentation WIP, and (3) predefine SKU re-sequencing rules so scarce tank slots can be reallocated quickly after disruption.
+3. Scenario 2 - Heat Wave + 2026 World Cup Demand Surge
+Trigger and propagation. A late-June heat wave coincides with a Korean national team World Cup match, causing short-window Cass Fresh demand to exceed forecast. Retailers experience same-day stockouts and place urgent replenishment orders. Wholesalers, fearing further shortages, batch and inflate orders beyond the actual retail signal. HQ receives this amplified order signal but cannot react with new beer inside the event window because any new batch arrives only after the 17-day production and replenishment cycle. By the time expedited production reaches the DC, the heat wave or event-driven demand may already have faded, leaving excess channel inventory.
+Quantitative logic. If normal summer demand is already above annual average and an event adds a temporary spike, the short-window peak may approach 1.5x normal daily demand. However, the baseline fermentation model has only about 16% headroom at 84% utilization. Therefore, the bottleneck cannot absorb a 50% surge through reactive production. The response must be anticipatory: use forecasts and event calendars 4-8 weeks earlier to pre-build the correct SKU mix, then use real-time POS information to prevent wholesalers from amplifying the signal.
+4. AI Opportunity Portfolio
+AI-1 - K-Filter optimization. In this report, K-Filter means a TensorFlow / BigQuery-based predictive model for beer filtration, benchmarked from the AB InBev-Google Cloud / Pluto7 case. It is not a separate physical filter brand; it is a machine-learning layer applied to the filtration process. The model uses pressure, flow rate, temperature, turbidity, yeast concentration, prior yield, and CIP timing to predict filter clogging and yield deviation before operators detect them through reactive thresholds. Its value is reducing post-bottleneck loss and delay after beer has already passed fermentation.
+AI-2 - Multivariate SKU-level demand forecasting. This model forecasts Cass Fresh, Cass Light, and Cass 0.0 demand with prediction intervals, using historical sales and shipments, SKU inventory, tank utilization, weather forecasts, promotion schedules, sports calendars, and optional search or social signals. Its output is not only a sales forecast; it directly supports fermentation tank allocation, pre-build quantity, SKU priority, and safety-stock adjustment.
+AI-3 - Real-time channel-data integrated VMI. This opportunity targets the bullwhip effect by integrating daily POS, shipment, and inventory data from wholesalers and major retailers. The AI layer cleans partner data, reconciles schemas, detects anomalies, and produces a retail-demand signal that HQ can use instead of relying only on amplified wholesaler orders. Its limitation is partner data-sharing agreements rather than modeling difficulty.
+5. Prioritization for M4
+AI-2 should be selected as the lead M4 opportunity. The reason is not that AI-2 solves Scenario 1. Scenario 1 is fundamentally an equipment / contamination capacity-loss problem, so only contamination control, preventive maintenance, and operational slack can reduce the probability of the event itself. AI-2 instead improves the allocation response after such a shock by helping planners decide which SKU receives scarce tank capacity, how much finished-goods buffer must be protected, and where shortages should be tolerated. For Scenario 2, AI-2 addresses the primary cause more directly by forecasting event- and weather-driven demand before the 17-day lead time locks the system.
+Compared with AI-1, AI-2 has broader system impact because it affects every production cycle and every SKU allocation decision. Compared with AI-3, AI-2 is more controllable because it can begin with internal sales, shipment, inventory, and public weather / event data, while AI-3 depends on external partner agreements. Therefore, M4 should design the AI-2 workflow first and treat AI-1 as a parallel low-risk process improvement and AI-3 as a longer-term coordination upgrade. The final contribution will be a bottleneck-aware decision-support system that links demand uncertainty to tank allocation, not a generic demand-forecasting dashboard.

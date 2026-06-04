@@ -1,0 +1,155 @@
+Term Project Guideline
+Production & Operations Management
+1  Project Overview
+In this term project, each team will select a real-world supply chain, analyze its structure and risks, and identify where AI can improve its operations. The analysis should cover both the overall supply chain (e.g., how materials and information move from raw material suppliers to end customers) and individual stages (e.g., how a specific factory manages its inventory or production schedule). Each team must write the analysis report based on the course material.
+The project has three sub-tasks:
+Supply Chain Analysis: Identify the key stakeholders (e.g., suppliers, manufacturers, distributors, and retailers) and the flows (materials, information, money) that make up the supply chain. Describe the characteristics and relationships among them.
+Risk Analysis: Identify risk factors that can occur during supply chain operations and describe each risk factor in detail. Then, create a concrete and structured risk management plan based on realistic scenarios in which these risks actually occur.
+AI Opportunity Discovery: Based on the structural understanding of the supply chain, identify specific points where AI can help solve the problems and risks identified above.
+AI opportunities must be based on the supply chain’s actual structure and available data—not in speculation about what AI might generically do. Use course concepts (process analysis, inventory models, forecasting, variability management, scheduling, supply chain coordination, etc.) as the basis for your analysis.
+2  Analytical Framework
+This section describes the three analysis areas, each matching one sub-task from Section 1.
+2.1  Supply Chain Analysis
+Process Flow Analysis
+Batching & Setup
+Quality & Variability
+Scheduling & Prioritization
+Demand Forecasting
+Inventory Management
+Production Strategy (MTS/MTO/ATO)
+Revenue Management
+Supply Chain Coordination
+Not every concept will apply equally to every supply chain. Select and apply the ones most relevant to your chosen case.
+2.2  Risk Analysis
+Identify risks in the supply chain, assess how a risk at one stage can spread to other stages, and design resolution strategies using course concepts.
+Risk Identification & Classification
+How Risks Spread
+Impact Assessment
+Resolution Strategies
+2.3  AI Opportunity Discovery
+Where can AI meaningfully contribute to improving operations, and how should it be designed and integrated? Your AI analysis should address three parts—discovery, evaluation, and collaboration design—each described below.
+Discovery
+Which decisions currently rely on manual judgement that could be augmented with data-driven methods?
+Where can AI improve accuracy or speed over existing approaches?
+What kinds of anomalies exist and how can AI detect/control them?
+Evaluation
+Task Appropriateness
+Data Readiness
+Failure Modes
+Performance Monitoring
+Collaboration Design
+Role Allocation
+Decision Authority
+Handling Uncertainty
+Workflow Integration
+2.4  Example Supply Chain Topics
+Supply Chain
+Characteristics
+TSMC wafer fabrication
+Long lead time(months), High capital investment, Yield variation
+Hyundai Motor vehicle assembly
+Thousands of components, Frequent small-lot delivery
+Coupang Rocket Delivery
+Same-day/next-day delivery promise, High return rate
+Starbucks Korea coffee bean
+Long international transport, Perishable after roasting
+3  Project Milestones and Deliverables
+The project spans 14 weeks and is organized around two major checkpoints: a mid-term Proposal Report (Week 5) and a Final Report (end of semester). The TAs will provide feedbacks for each milestone. Milestones are not graded.
+M1
+Week 4
+Supply Chain Selection
+M2
+Week 6
+Supply Chain Structure Modeling & Process Analysis
+Proposal
+Week 8
+Mid-term Proposal Report (Graded) – 10%
+M3
+Week 10
+Risk Scenario Analysis & AI Opportunity Identification
+M4
+Week 12
+AI Integration Design
+Final
+Week 14
+Final Report Submission (Graded) – 30%
+3.1  M1: Supply Chain Selection (Weeks 3–4)
+Each team selects a real-world supply chain and develops an initial understanding of its structure. The supply chain should have enough complexity (multiple tiers of suppliers, production facilities, distribution channels, and customer segments) but be narrow enough to analyze within one semester.
+Example Tasks
+Select and justify a target supply chain for analysis.
+Describe the supply chain’s purpose, product/service, stakeholders, and operating environment.
+Define the supply chain boundary: what is inside and outside the scope of analysis.
+Describe what moves through the supply chain (materials, information, money), why it moves, how it moves (transportation, digital systems, etc.), and how efficiently it moves.
+3.2  M2: Supply Chain Structure Modeling & Process Analysis (Weeks 5–6)
+Build structured models of the supply chain using course concepts (e.g., process flow diagrams, capacity analysis, inventory models). The goal is to identify the supply chain's structure, bottlenecks, and key decision points with specific numbers (capacity, utilization, flow time, etc.).
+Example Tasks
+Draw a process flow diagram of the supply chain. Identify the bottleneck and calculate capacity, utilization, and flow time at each stage.
+Determine the production strategy (MTS/MTO/ATO) and locate the push–pull boundary. Assess how the company forecasts demand and where forecast errors are largest.
+Map inventory across the chain (cycle, safety, pipeline, and seasonal). Evaluate whether current safety stock levels match the target service level, and identify where variability in arrivals, processing times, or quality causes the most disruption.
+Examine how information flows across partners. Look for signs of the Bullwhip Effect and evaluate coordination mechanisms in place (contracts, VMI, information sharing).
+3.3  M3: Risk Analysis & AI Opportunity Identification (Weeks 9–10)
+Systematically identify risks in the supply chain structure, and then discover AI opportunities that help address those risks, based on the analysis from M2.
+Part A: Risk Analysis – Example Tasks
+Identify risk factors across the supply chain. Categorize them (demand risk, supply risk, process risk, environmental risk, and coordination risk). Link each risk to specific stages, partners, or flows in your supply chain map.
+Develop detailed risk scenarios (situations where an identified risk actually occurs). For each scenario, describe: the triggering event, how the problem spreads through the chain, quantitative impact (using your process analysis results), and the effects on upstream and downstream partners.
+For each risk scenario, propose resolution strategies using course concepts.
+Part B: AI Opportunity Analysis – Example Tasks
+Based on your supply chain analysis, identify at least three points where AI can deliver meaningful improvement. Each must be linked to a specific process step, decision point, or data flow in your diagrams, and should address one or more of the risks identified in Part A.
+For each candidate, describe what task the AI supports, what improvement is expected (accuracy, speed, cost, risk reduction, etc.), and what data is required.
+For each candidate, describe what could go wrong (misprediction, data gaps, model bias, etc.) and what safeguards are needed to keep the system reliable.
+3.4  M4: AI Integration Design (Weeks 11–12)
+Select the top-ranked AI opportunity from M3 and develop a concrete design for how it would be integrated into the supply chain's operations.
+Example Tasks
+Justify why you chose this opportunity over the other candidates.
+Describe in detail how the AI would work within the current supply chain workflow --- what inputs it receives, what outputs it produces, and who acts on them.
+Create a before/after workflow diagram that clearly shows what changes with AI and where the human decision-maker and the AI system interact.
+Explain how this AI integration also helps mitigate one or more of the supply chain risks you identified earlier.
+3.5  Deliverable Guidelines
+Each Deliverable must be submitted in Word, PowerPoint, or PDF format.
+Each milestone deliverable has a length limit of 1 page (Word), 3 slides (PowerPoint).
+Proofread for grammar and clarity before submission.
+3.6  Final Report (Week 14, Graded)
+The final report integrates and refines all prior work into a single coherent document. It is the primary graded deliverable along with the Proposal Presentation.
+Report Structure (12–20 pages, excluding appendices)
+Executive Summary
+Supply Chain Context & Boundary
+Supply Chain Structure & Process Analysis
+Risk Analysis: Risk Factors, Risk Scenarios, Resolution Strategies
+AI Opportunity Analysis: Discovery, Feasibility Evaluation, and Integration Design
+Lessons Learned & Limitations
+References
+The final report is not simply a concatenation of milestone submissions. It should be a revised, integrated document with a consistent style, terminology, and clear logical flow. Earlier milestone work should be improved based on feedback.
+4  Grading
+Your project grade is based on two graded components:
+Component
+Weight
+Evaluation Focus
+Proposal Report
+10%
+Clarity of supply chain selection, scope definition, preliminary analysis quality, feasibility of project plan
+Final Report, Presentation
+30%
+Depth of analysis, correct application of course concepts, quality of risk scenarios, depth of AI opportunity analysis and its connection to risks, integration and consistency of the report
+Milestone deliverables (M1–M4) are not individually graded but serve as structured checkpoints for receiving feedback and refining your work before the graded deliverables. You are strongly encouraged to seek feedback early and often.
+5  Project Policies
+5.1  Team Composition
+Teams of 5 members. Teams will be randomly assigned by the instructor. All team members are expected to contribute equally.
+5.2  Generative AI Use Policy
+You are permitted and encouraged to use generative AI tools (e.g., ChatGPT, Claude, Copilot) during this project for brainstorming, drafting, exploring alternatives, and analysis support.
+However, the following expectation applies without exception: you must understand everything you submit. If you incorporate AI-generated text, diagrams, or analysis into your deliverables, you are responsible for its correctness, relevance, and coherence. If you cannot explain or defend any part of your submission when asked, it will not receive credit.
+5.3  Data Sources
+You may use publicly available data, industry reports, news articles, company filings, academic papers, or reasonable estimates based on industry benchmarks. If using estimated data, clearly state your assumptions. Personal experience or interviews with industry practitioners are also acceptable sources.
+5.4  Feedback and Support
+Feedback on milestone submissions is available by appointment. Do not wait until the final report to ask for guidance.
+Role
+Name
+Email
+Instructor
+Prof. Hyunbo Cho
+hcho@postech.ac.kr
+TA
+Sehee Moon
+saymoon@postech.ac.kr
+TA
+Gi Suk Hong
+kisuk13577@postech.ac.kr

@@ -1,0 +1,302 @@
+탭 1
+1. target Supply chain : 카스 맥주 양조 공정2. Draw a process flow diagram of the supply chain. Identify the bottleneck and calculate capacity, utilization, and flow time at each stage.
+3. Determine the production strategy (MTS/MTO/ATO) and locate the push–pull boundary. Assess how the company forecasts demand and where forecast errors are largest.
+4. Map inventory across the chain (cycle, safety, pipeline, and seasonal). Evaluate whether current safety stock levels match the target service level, and identify where variability in arrivals, processing times, or quality causes the most disruption.
+최지안의 Claude
+M2: Supply Chain Structure Modeling & Process Analysis
+Cass Beer (OB Brewery) — Cass Fresh / Cass Light / Cass 0.0
+1. Process Flow & Bottleneck Analysis
+공정 흐름도 (다이어그램 별첨 참조)
+오비맥주 카스 제품군(Cass Fresh, Cass Light, Cass 0.0)은 공통 전처리 공정을 공유한 뒤, 호핑(Hopping) 단계에서 제품별로 분기한다. 전처리 3단계(분쇄→당화→여과)는 모든 제품이 동일한 설비를 사용하며, 호핑 단계에서 사용하는 홉 품종과 배합비에 따라 Cass Fresh(표준 라거 홉)와 Cass Light(세 가지 홉 조합, 고발효 공법)가 분기된다. 이후 냉각→발효→숙성→여과는 세 제품 모두 동일한 발효 탱크와 숙성 탱크를 공유하되, Cass Light는 고발효 공법을 통해 탄수화물을 33% 추가 감소시킨다. Cass 0.0은 Cass Fresh와 완전히 동일한 발효·숙성 과정을 거친 뒤, 최종 여과 단계에서 '스마트 알코올 분리 공법'을 통해 알코올만 추출하는 추가 공정이 존재한다.
+공정별 소요 시간 및 병목 식별 (업계 표준 기반 추정치)
+공정
+소요 시간
+처리 방식
+비고
+분쇄(Milling)
+~1시간
+연속
+롤러밀 기준 ~1,000kg/hr
+당화(Mashing)
+2~3시간
+배치
+효소 활성 온도 60~70°C
+여과(Lautering)
+1~2시간
+배치
+맥아즙 분리
+호핑+자비(Boiling)
+1~2시간
+배치
+제품 분기점 — 홉 종류·투입량 차이
+냉각(Cooling)
+1~2시간
+연속
+열교환기 80°C→12°C
+발효(Fermentation)
+~14일 (2주)
+배치
+병목 #1 — 전체 flow time의 ~82%
+숙성(Lagering)
+~3일
+배치
+병목 #2 — 발효 탱크와 별도 탱크 필요
+여과(Filtration)
+수 시간
+연속
+Cass 0.0은 여기서 알코올 분리 추가 공정
+전체 flow time은 약 17~18일이며, 이 중 발효+숙성이 17일로 전체의 약 94%를 차지한다. 발효 탱크의 점유 시간이 가장 길기 때문에, 발효 탱크 수가 전체 생산 용량을 결정하는 핵심 병목(bottleneck)이다. 발효 전 공정(분쇄~냉각)은 1일 이내에 완료되므로, 이론적으로 발효 탱크 1기를 기준으로 2주에 1배치를 생산할 수 있다. 연간으로 환산하면 탱크 1기당 약 26배치/년이며, 탱크 용량을 산업 표준인 300~500kL로 가정하면 탱크 1기당 연간 7,800~13,000kL를 생산할 수 있다.
+제품 간 설비 대치(Trade-off) 분석
+세 제품이 동일 발효 탱크를 시분할로 사용하므로, 제품 전환 시 CIP(Clean-In-Place) 세척에 4~8시간이 소요된다. 연간 전환 횟수가 증가하면 유효 생산능력이 감소한다. 예를 들어, 주 1회 전환 시 연간 CIP 손실 시간은 약 208~416시간(≈9~17일)이며, 이는 발효 탱크 1기의 연간 생산능력의 약 3~7%에 해당한다. 특히 Cass 0.0은 발효·숙성까지는 Cass Fresh와 동일하므로 발효 탱크를 공유하지만, 최종 여과에서 알코올 분리 공정이 추가되어 여과 설비의 점유 시간이 더 길다.
+원재료 측면에서도 대치가 존재한다. Cass Fresh는 맥아+옥수수(부가물 라거)를, Cass Light는 맥아 기반에 세 가지 홉을 사용하므로, 제품 믹스 변화 시 홉 종류별 발주량 조정이 필요하다. 한국은 홉의 90% 이상을 수입에 의존하므로(미국 Yakima, 독일 Hallertau), 홉 종류 변경의 리드타임은 4~8주로 제품 전환의 추가 제약이 된다.
+2. Production Strategy (MTS) & Push-Pull Boundary
+오비맥주 카스 제품군은 전형적인 MTS(Make-to-Stock) 전략을 따른다. 수요 예측에 기반하여 사전 생산하고, 완제품 재고를 물류센터에 적치한 뒤 주문에 따라 출하한다. 이는 맥주가 대량 소비재이며, 발효·숙성에 최소 17일이 소요되어 주문 후 생산(MTO)이 현실적으로 불가능하기 때문이다.
+Push-Pull Boundary: 여과 완료 시점을 기준으로, 그 이전(분쇄~발효~숙성~여과)은 Push(예측 기반 생산), 이후(완제품 출하)는 Pull(주문 기반 배송)이다. 다만 Cass 0.0은 무알코올 맥주 시장의 급성장(2022년 200억→2024년 700억 규모, 연 10%+ 성장)에도 불구하고 전체 맥주 대비 비중이 작고 수요 불확실성이 높아, 상대적으로 소량 생산·빈번 보충 방식에 가까워 MTS 내에서도 Pull 요소가 강하다.
+수요 예측 오차가 가장 큰 지점: 맥주 수요의 계절성은 6~8월 여름 성수기에 연간 소비의 약 40%가 집중되는 구조로, 이 시기의 예측 오차가 가장 크다. 특히 여름 피크 진입 시점(5월 말~6월 초)에 실제 기온과 예측 기온의 괴리가 발생하면, 수요 예측 오차가 ±15~20%까지 확대될 수 있다. 이 오차는 발효 리드타임(2주) 때문에 즉시 대응이 불가능하며, 최소 3개월 전(3월)부터 여름 수요를 예측하여 증산 계획을 수립해야 한다.
+3. Inventory Mapping
+맥주 공급망의 재고를 4가지 유형으로 분류하여 매핑한다.
+Cycle Inventory (순환 재고): 배치 생산의 특성상 발효 1배치(약 300~500kL) 단위로 생산되며, 이 배치 크기가 순환 재고를 결정한다. 배치 간격은 발효 주기인 약 2주이므로, 평균 순환 재고는 1배치 생산량의 약 1/2이다. 제품 전환(카스→카스 라이트)이 발생하면 CIP 시간만큼 다음 배치가 지연되어 순환 재고 수준이 일시적으로 하락한다.
+Safety Stock (안전 재고): 수요 변동성과 공급 리드타임을 고려하여 설정한다. 맥주의 경우, 수요 변동의 주요 원인은 기온(여름 +40%, 겨울 -20%), 프로모션(할인 행사 시 소매점 과잉 발주), 이벤트(월드컵·야구 시즌)이다. 발효 리드타임이 2주로 긴 점을 감안하면, 목표 서비스 수준 95%를 유지하기 위해 약 1~2주분의 안전 재고가 필요하다. Cass 0.0은 수요 불확실성이 더 높으나 전체 볼륨이 작아, 안전 재고 비율(수요 대비)은 카스 프레시보다 높게 설정해야 한다.
+Pipeline Inventory (파이프라인 재고): 발효+숙성 중인 WIP(Work-in-Process)가 파이프라인 재고의 대부분을 구성한다. 발효 중인 맥주는 17일간 탱크에 점유되어 있으며, 이 기간 동안 판매할 수 없으므로 상당한 자본이 묶인다. 파이프라인 재고 = 일일 생산량 × 발효+숙성 기간(17일)이며, 이는 전체 재고의 가장 큰 비중을 차지한다. 이 재고는 발효 공정의 생물학적 특성상 단축이 불가능하다는 점이 핵심 제약이다.
+Seasonal Inventory (계절 재고): 여름 성수기(6~8월) 수요 급증에 대비하여 4~5월부터 사전 증산하여 축적하는 재고이다. 맥주의 유통기한(살균 맥주 기준 6~12개월)이 사전 축적의 상한을 결정하며, 너무 일찍 생산하면 신선도가 저하된다. 오비맥주는 "1개월 내 고객 도달" 전략을 채택하여, 과도한 계절 재고 축적보다 발효 탱크 풀가동(가동률 상향)으로 대응하는 방식을 취하고 있다.
+재고 관리의 핵심 과제: 발효 탱크라는 단일 병목이 3개 제품의 파이프라인 재고와 순환 재고를 동시에 제약하므로, 제품 믹스 결정(카스:카스 라이트:카스 0.0 비율)이 재고 전략의 가장 중요한 의사결정 변수이다. 만약 Cass 0.0 수요가 급증하면, 동일 발효 탱크를 더 많이 배분해야 하므로 Cass Fresh의 파이프라인 재고와 안전 재고가 줄어들어 서비스 수준이 하락할 수 있다. 이 제품 간 재고 trade-off가 향후 M3에서 리스크 시나리오의 핵심이 될 것이며, AI 기반 제품 믹스 최적화 수요예측이 이 문제를 해결할 수 있는 기회로 연결된다.
+참고: 공정별 소요 시간 및 탱크 용량은 라거 양조 업계 표준에 기반한 추정치이며, 오비맥주의 실제 수치와 차이가 있을 수 있음. 제품별 공법 차이(카스 라이트 고발효, 카스 0.0 알코올 분리)는 오비맥주 공식 웹사이트(cass.co.kr) 제품 소개 기반.
+탭 3
+Milestone 2 Report
+Supply Chain Structure Modeling & Process Analysis: Cass / Cass Light / Cass 0.0
+Team 4
+1. Analysis Scope and Assumptions
+This report covers the internal brewery production system for Cass, Cass Light, and Cass 0.0. In response to the project feedback, the analysis focuses not on a single SKU, but on a shared production system in which multiple Cass-family products compete for common brewing resources such as upstream brewing equipment, fermentation tanks, and maturation capacity. The packaging process is excluded from detailed analysis, and the emphasis is placed on the brewing-side process structure and resource substitution across products.
+The production system is assumed to operate under Make-to-Stock (MTS). This assumption is reasonable because beer is a mass-market product supplied continuously to downstream channels such as convenience stores, restaurants, and retailers. Therefore, production must be completed before actual customer purchase, and planning is driven mainly by demand forecasts rather than customer orders.
+Since detailed operational data from the brewery are not publicly available, the analysis uses reasonable industry-style assumptions for relative process times and capacity logic. These assumptions are stated explicitly below.
+Table 1. Main Assumptions Used in the Analysis
+Item
+Assumption
+Product scope
+Cass, Cass Light, Cass 0.0
+Production strategy
+MTS (Make-to-Stock)
+Detailed scope included
+Brewing-side internal process, shared production resources, inventory structure
+Detailed scope excluded
+Detailed packaging-line analysis, external distribution operations
+Bottleneck candidate
+Fermentation, followed by maturation
+Fermentation time
+Approximately 14 days
+Maturation time
+Approximately 3 days
+Earlier-stage processing
+Much shorter than fermentation and maturation
+Cass 0.0 special feature
+Additional dealcoholization step after normal brewing/maturation
+Capacity logic
+One fermentation tank is occupied by one batch during fermentation
+2. Process Flow Diagram and Structural Interpretation
+The supply chain process can be represented as a partially shared production structure. The three products share most upstream brewing stages, then diverge depending on recipe and treatment differences.
+Table 2. Simplified Process Flow
+Stage
+Cass
+Cass Light
+Cass 0.0
+Milling
+Shared
+Shared
+Shared
+Mashing
+Shared
+Shared
+Shared
+Wort Boiling
+Shared
+Shared
+Shared
+Cooling
+Shared
+Shared
+Shared
+Fermentation
+Standard fermentation
+Lighter recipe / product-specific condition
+Standard fermentation
+Maturation
+Standard maturation
+Product-specific maturation profile
+Standard maturation
+Additional treatment
+None
+None
+Dealcoholization
+Packaging
+Excluded from detailed analysis
+Excluded from detailed analysis
+Excluded from detailed analysis
+This structure is operationally important because the products do not move through fully separate lines. Instead, they compete for common equipment and shared tank capacity. That means a delay, quality issue, or capacity shortage in one shared stage can affect multiple products at the same time. In particular, the upstream brewing stages and the fermentation/maturation section act as common resources that require careful scheduling and product-mix allocation.
+The key feature of this system is that active processing time is relatively short in the earlier stages, but the product remains in fermentation and maturation for a long period. As a result, the real constraint is not how quickly wort can be prepared, but how much tank capacity is available and how quickly tanks can be turned over.
+3. Bottleneck, Capacity, Utilization, and Flow Time
+Among all stages, the most likely bottleneck is the fermentation stage, with maturation as the secondary constraint. The main reason is the long residence time. Fermentation is assumed to require approximately 14 days, while maturation requires around 3 days. Compared with these stages, milling, mashing, boiling, and cooling are much shorter and therefore much less likely to constrain total throughput.
+If one fermentation tank is dedicated to one batch during the full fermentation period, then the effective capacity of a single tank is limited by time occupancy.
+Table 3. Capacity Logic by Stage
+Stage
+Relative processing time
+Capacity implication
+Milling
+Very short
+Unlikely bottleneck
+Mashing
+Short
+Unlikely bottleneck unless severe equipment shortage
+Wort Boiling
+Short / batch-based
+Can constrain schedule temporarily but not likely the main bottleneck
+Cooling
+Short
+Unlikely bottleneck
+Fermentation
+Very long (14 days)
+Main bottleneck due to tank occupancy
+Maturation
+Long (3 days)
+Secondary bottleneck / supporting constraint
+Dealcoholization (Cass 0.0 only)
+Additional step
+May constrain Cass 0.0 specifically, but not the overall shared-system bottleneck
+Using the fermentation assumption, a single fermentation tank can process only:
+Tank capacity≈30 days14 days per batch≈2.1 batches/month
+Tank capacity≈
+14 days per batch
+30 days
+​
+≈2.1 batches/month
+This means that even if upstream brewing operations can prepare wort much more frequently, final system throughput is still constrained by fermentation tank turnover. The bottleneck is therefore created by long biological processing time, not by labor intensity or machine speed.
+Because the system is MTS and the company must maintain market availability, fermentation tanks are likely scheduled at high utilization. High utilization at the bottleneck has several consequences:
+Waiting time increases quickly when even small variability occurs.
+Schedule flexibility becomes low when product mix changes.
+Changeovers, cleaning, or quality failures create significant throughput losses.
+Forecasting errors become costly because tank time is committed well in advance.
+Total production flow time is therefore dominated by fermentation and maturation. Even if the active work in the earlier stages takes less than one day in total, the manufacturing flow time is driven mainly by the biological residence time of approximately 17 days or more.
+Table 4. Summary of Process-Time Interpretation
+Metric
+Interpretation
+Active processing time before fermentation
+Relatively short
+Fermentation time
+~14 days
+Maturation time
+~3 days
+Total production flow time
+Dominated by ~17+ days in tank-based stages
+Main implication
+Most time in system is WIP-like waiting, not active processing
+4. Production Strategy and Push–Pull Boundary
+The production system is best characterized as Make-to-Stock (MTS). Beer products such as Cass, Cass Light, and Cass 0.0 are sold through retail and food-service channels where customers expect immediate availability. Since the brewing lead time is long, the firm cannot realistically wait for actual end-customer orders before starting production.
+Therefore, production is forecast-driven and push-based for most of the internal chain, while retail sales are pull-based at the downstream end.
+Table 5. Production Strategy Interpretation
+Item
+Interpretation
+Production strategy
+MTS
+Why MTS is appropriate
+Beer must be available immediately in downstream channels
+Customer order timing
+Occurs after production is already completed
+Operational implication
+Forecasting is required before tank capacity is committed
+The push–pull boundary is located far downstream, near finished-goods inventory and distribution. Brewing, fermentation, and maturation are push processes. Actual sales to consumers occur later and pull product from finished inventory through distributors and retailers.
+This location of the push–pull boundary is especially important because of the long lead time at fermentation. If demand is underestimated, replenishment cannot be made quickly. If demand is overestimated, tank capacity and inventory are tied up unnecessarily.
+5. Forecasting and Forecast Error
+Demand forecasting is a critical planning input because production decisions must be made before final demand is known. Forecasts are likely needed at the aggregate level, SKU level, and seasonal-event level.
+Forecast error is expected to be largest in the following situations:
+Table 6. Main Sources of Forecast Error
+Source of forecast error
+Explanation
+Seasonality
+Beer demand rises in warm weather, holidays, and event periods
+SKU substitution
+Customers may shift among Cass, Cass Light, and Cass 0.0
+Promotions
+Retailer or competitor campaigns can create short-term volatility
+Trend uncertainty
+Cass 0.0 demand may change more quickly due to lifestyle and health trends
+Among the three products, standard Cass is likely the most predictable because it has the broadest and most stable base demand. Cass Light may show somewhat greater demand variability because its segment is narrower. Cass 0.0 is likely the most uncertain because it depends more on evolving consumer trends and also requires an additional process step.
+Table 7. Relative Demand Predictability by Product
+Product
+Relative predictability
+Reason
+Cass
+High
+Large base demand and stable sales history
+Cass Light
+Medium
+Smaller segment and more variable demand pattern
+Cass 0.0
+Lower
+Trend-sensitive demand and extra processing requirement
+Forecast error is particularly costly in this system because the bottleneck is upstream in fermentation. Overforecasting occupies scarce tank capacity and increases excess inventory risk. Underforecasting causes stockouts that cannot be corrected quickly because the brewing cycle is long.
+6. Inventory Mapping Across the Chain
+Since the system is MTS, inventory is used to absorb uncertainty and maintain service levels. The major inventory categories in the supply chain can be mapped as cycle inventory, safety inventory, pipeline inventory, and seasonal inventory.
+Table 8. Inventory Mapping
+Inventory type
+Where it appears
+Role in this supply chain
+Cycle inventory
+Between stages and as finished-goods batches
+Created by batch production and shared-equipment scheduling
+Safety inventory
+Mainly finished goods, partly raw materials
+Protects against demand variability and replenishment delays
+Pipeline inventory
+Internal WIP in tanks and external transport inventory
+Large internal pipeline due to fermentation and maturation lead time
+Seasonal inventory
+Finished goods before peak season
+Built ahead of expected demand surges such as summer
+6.1 Cycle Inventory
+Cycle inventory arises because brewing operations are run in batches. Shared equipment such as kettles, cooling systems, and tanks are scheduled in production runs rather than continuously for all SKUs simultaneously. Producing in batches reduces changeover frequency and improves planning stability, but it also creates inventory between stages and in finished stock.
+6.2 Safety Inventory
+Safety inventory is most important at the finished-goods stage. Since actual customer demand occurs after brewing is completed, finished inventory is needed to protect service levels against forecast error, short-term demand spikes, or temporary delays. Some raw material safety stock may also exist, especially for imported ingredients, but the more critical issue in this analysis is the mismatch between long internal lead time and downstream service expectations.
+A reasonable interpretation is that standard Cass should hold the highest safety stock level, since it likely has the highest service-level expectation and the largest base demand. Cass Light and Cass 0.0 also need protection, but too much safety stock may be costly if their demand is less stable.
+6.3 Pipeline Inventory
+Pipeline inventory exists not only in transportation, but also internally as work-in-process residing in fermentation and maturation tanks. This internal pipeline inventory is especially large because of the long residence time. Beer that is fermenting is not yet saleable, but it already occupies capacity and ties up working capital. In this system, internal pipeline inventory is structurally unavoidable, but still economically important.
+6.4 Seasonal Inventory
+Seasonal inventory is likely accumulated ahead of summer and other high-demand periods. Because fermentation and maturation require long lead times, the company cannot respond instantly when peak demand begins. Instead, it must produce in advance and carry additional finished stock into the season.
+7. Variability and Operational Disruption
+The most important question in Task 3 is where variability causes the greatest disruption. In this brewery system, the main sources of variability are arrival variability, processing-time variability, and quality variability.
+Table 9. Main Variability Sources
+Variability source
+Example
+Likely impact
+Arrival variability
+Ingredient lead-time uncertainty, raw material price fluctuation
+Can affect input availability and planning confidence
+Processing-time variability
+Tank cleaning, product switching, recipe differences
+Can delay the bottleneck and reduce throughput
+Quality variability
+Fermentation failure, contamination, off-spec output
+Causes disposal loss and lost bottleneck capacity
+Among these, the most disruptive is process and quality variability at fermentation. Since fermentation is the bottleneck, any delay or failure there has a system-wide effect. A quality issue in a non-bottleneck stage may be recoverable with overtime or resequencing, but a quality problem in fermentation consumes scarce tank time and directly reduces monthly throughput.
+This implies that inventory is being used partly as protection against bottleneck inflexibility. That is reasonable in an MTS system, but it also means that forecasting, tank allocation, and process reliability must be managed together. If not, the company may carry excess stock while still facing service failures in the wrong SKU.
+8. Conclusion
+The Cass-family brewing supply chain should be understood as a shared-capacity multi-product production system, not as three fully separate product lines. Cass, Cass Light, and Cass 0.0 share most upstream brewing resources and compete especially for fermentation and maturation capacity. Among all stages, fermentation is the main bottleneck because of its long lead time and tank occupancy requirement.
+The system can be summarized as follows:
+Table 10. Final Summary
+Category
+Conclusion
+Production strategy
+MTS
+Push–pull boundary
+Downstream of brewing, near finished-goods distribution
+Main bottleneck
+Fermentation
+Secondary bottleneck
+Maturation
+Main inventory burden
+WIP in tanks + finished-goods safety stock
+Largest forecast uncertainty
+Cass 0.0
+Most disruptive variability
+Fermentation-stage process/quality variability
+Core managerial issue
+Tank-capacity allocation and product-mix planning under forecast uncertainty
+Overall, this M2 analysis shows that the major managerial challenge is not simply making beer, but allocating scarce shared tank capacity across multiple products while balancing long lead times, forecast error, and service-level expectations. This provides a strong foundation for the next milestone, where specific risk scenarios and AI opportunities can be linked directly to bottleneck management, demand forecasting, and process monitoring.

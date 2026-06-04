@@ -1,0 +1,866 @@
+{
+  "2020-01-regular": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2020-01-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2020-02-regular": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2020-02-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2020-03-regular": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2020-03-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2020-04-regular": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2020-04-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2020-05-regular": {
+    "games": 117,
+    "game_days": 24,
+    "cancelled_like_rows": 4,
+    "raw_rows": 121
+  },
+  "2020-05-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2020-06-regular": {
+    "games": 121,
+    "game_days": 25,
+    "cancelled_like_rows": 10,
+    "raw_rows": 131
+  },
+  "2020-06-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2020-07-regular": {
+    "games": 116,
+    "game_days": 27,
+    "cancelled_like_rows": 24,
+    "raw_rows": 141
+  },
+  "2020-07-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2020-08-regular": {
+    "games": 119,
+    "game_days": 27,
+    "cancelled_like_rows": 19,
+    "raw_rows": 138
+  },
+  "2020-08-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2020-09-regular": {
+    "games": 128,
+    "game_days": 27,
+    "cancelled_like_rows": 9,
+    "raw_rows": 137
+  },
+  "2020-09-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2020-10-regular": {
+    "games": 119,
+    "game_days": 27,
+    "cancelled_like_rows": 1,
+    "raw_rows": 120
+  },
+  "2020-10-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2020-11-regular": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2020-11-postseason": {
+    "games": 13,
+    "game_days": 13,
+    "cancelled_like_rows": 1,
+    "raw_rows": 20
+  },
+  "2020-12-regular": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2020-12-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2021-01-regular": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2021-01-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2021-02-regular": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2021-02-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2021-03-regular": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2021-03-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2021-04-regular": {
+    "games": 116,
+    "game_days": 24,
+    "cancelled_like_rows": 4,
+    "raw_rows": 120
+  },
+  "2021-04-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2021-05-regular": {
+    "games": 113,
+    "game_days": 25,
+    "cancelled_like_rows": 20,
+    "raw_rows": 144
+  },
+  "2021-05-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2021-06-regular": {
+    "games": 123,
+    "game_days": 26,
+    "cancelled_like_rows": 13,
+    "raw_rows": 138
+  },
+  "2021-06-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2021-07-regular": {
+    "games": 33,
+    "game_days": 10,
+    "cancelled_like_rows": 12,
+    "raw_rows": 85
+  },
+  "2021-07-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2021-08-regular": {
+    "games": 81,
+    "game_days": 20,
+    "cancelled_like_rows": 19,
+    "raw_rows": 101
+  },
+  "2021-08-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2021-09-regular": {
+    "games": 132,
+    "game_days": 26,
+    "cancelled_like_rows": 11,
+    "raw_rows": 143
+  },
+  "2021-09-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2021-10-regular": {
+    "games": 122,
+    "game_days": 28,
+    "cancelled_like_rows": 2,
+    "raw_rows": 124
+  },
+  "2021-10-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2021-11-regular": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2021-11-postseason": {
+    "games": 11,
+    "game_days": 11,
+    "cancelled_like_rows": 0,
+    "raw_rows": 16
+  },
+  "2021-12-regular": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2021-12-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2022-01-regular": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2022-01-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2022-02-regular": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2022-02-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2022-03-regular": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2022-03-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2022-04-regular": {
+    "games": 123,
+    "game_days": 25,
+    "cancelled_like_rows": 2,
+    "raw_rows": 125
+  },
+  "2022-04-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2022-05-regular": {
+    "games": 129,
+    "game_days": 26,
+    "cancelled_like_rows": 1,
+    "raw_rows": 130
+  },
+  "2022-05-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2022-06-regular": {
+    "games": 117,
+    "game_days": 26,
+    "cancelled_like_rows": 12,
+    "raw_rows": 130
+  },
+  "2022-06-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2022-07-regular": {
+    "games": 95,
+    "game_days": 21,
+    "cancelled_like_rows": 9,
+    "raw_rows": 105
+  },
+  "2022-07-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2022-08-regular": {
+    "games": 109,
+    "game_days": 25,
+    "cancelled_like_rows": 14,
+    "raw_rows": 125
+  },
+  "2022-08-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2022-09-regular": {
+    "games": 119,
+    "game_days": 26,
+    "cancelled_like_rows": 4,
+    "raw_rows": 123
+  },
+  "2022-09-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2022-10-regular": {
+    "games": 28,
+    "game_days": 10,
+    "cancelled_like_rows": 3,
+    "raw_rows": 31
+  },
+  "2022-10-postseason": {
+    "games": 10,
+    "game_days": 10,
+    "cancelled_like_rows": 0,
+    "raw_rows": 16
+  },
+  "2022-11-regular": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2022-11-postseason": {
+    "games": 6,
+    "game_days": 6,
+    "cancelled_like_rows": 0,
+    "raw_rows": 8
+  },
+  "2022-12-regular": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2022-12-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2023-01-regular": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2023-01-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2023-02-regular": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2023-02-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2023-03-regular": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2023-03-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2023-04-regular": {
+    "games": 120,
+    "game_days": 26,
+    "cancelled_like_rows": 9,
+    "raw_rows": 130
+  },
+  "2023-04-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2023-05-regular": {
+    "games": 113,
+    "game_days": 26,
+    "cancelled_like_rows": 15,
+    "raw_rows": 130
+  },
+  "2023-05-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2023-06-regular": {
+    "games": 121,
+    "game_days": 25,
+    "cancelled_like_rows": 6,
+    "raw_rows": 130
+  },
+  "2023-06-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2023-07-regular": {
+    "games": 83,
+    "game_days": 20,
+    "cancelled_like_rows": 16,
+    "raw_rows": 100
+  },
+  "2023-07-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2023-08-regular": {
+    "games": 113,
+    "game_days": 26,
+    "cancelled_like_rows": 19,
+    "raw_rows": 135
+  },
+  "2023-08-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2023-09-regular": {
+    "games": 110,
+    "game_days": 27,
+    "cancelled_like_rows": 18,
+    "raw_rows": 128
+  },
+  "2023-09-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2023-10-regular": {
+    "games": 60,
+    "game_days": 17,
+    "cancelled_like_rows": 0,
+    "raw_rows": 60
+  },
+  "2023-10-postseason": {
+    "games": 6,
+    "game_days": 6,
+    "cancelled_like_rows": 0,
+    "raw_rows": 9
+  },
+  "2023-11-regular": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2023-11-postseason": {
+    "games": 8,
+    "game_days": 8,
+    "cancelled_like_rows": 0,
+    "raw_rows": 13
+  },
+  "2023-12-regular": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2023-12-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2024-01-regular": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2024-01-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2024-02-regular": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2024-02-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2024-03-regular": {
+    "games": 37,
+    "game_days": 8,
+    "cancelled_like_rows": 3,
+    "raw_rows": 40
+  },
+  "2024-03-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2024-04-regular": {
+    "games": 121,
+    "game_days": 25,
+    "cancelled_like_rows": 7,
+    "raw_rows": 128
+  },
+  "2024-04-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2024-05-regular": {
+    "games": 122,
+    "game_days": 26,
+    "cancelled_like_rows": 13,
+    "raw_rows": 137
+  },
+  "2024-05-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2024-06-regular": {
+    "games": 125,
+    "game_days": 26,
+    "cancelled_like_rows": 11,
+    "raw_rows": 138
+  },
+  "2024-06-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2024-07-regular": {
+    "games": 97,
+    "game_days": 23,
+    "cancelled_like_rows": 16,
+    "raw_rows": 115
+  },
+  "2024-07-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2024-08-regular": {
+    "games": 119,
+    "game_days": 27,
+    "cancelled_like_rows": 12,
+    "raw_rows": 131
+  },
+  "2024-08-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2024-09-regular": {
+    "games": 98,
+    "game_days": 27,
+    "cancelled_like_rows": 10,
+    "raw_rows": 108
+  },
+  "2024-09-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2024-10-regular": {
+    "games": 1,
+    "game_days": 1,
+    "cancelled_like_rows": 0,
+    "raw_rows": 1
+  },
+  "2024-10-postseason": {
+    "games": 16,
+    "game_days": 16,
+    "cancelled_like_rows": 0,
+    "raw_rows": 24
+  },
+  "2024-11-regular": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2024-11-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2024-12-regular": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2024-12-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2025-01-regular": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2025-01-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2025-02-regular": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2025-02-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2025-03-regular": {
+    "games": 39,
+    "game_days": 8,
+    "cancelled_like_rows": 0,
+    "raw_rows": 40
+  },
+  "2025-03-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2025-04-regular": {
+    "games": 114,
+    "game_days": 25,
+    "cancelled_like_rows": 6,
+    "raw_rows": 130
+  },
+  "2025-04-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2025-05-regular": {
+    "games": 131,
+    "game_days": 26,
+    "cancelled_like_rows": 16,
+    "raw_rows": 147
+  },
+  "2025-05-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2025-06-regular": {
+    "games": 111,
+    "game_days": 25,
+    "cancelled_like_rows": 14,
+    "raw_rows": 125
+  },
+  "2025-06-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2025-07-regular": {
+    "games": 100,
+    "game_days": 21,
+    "cancelled_like_rows": 7,
+    "raw_rows": 110
+  },
+  "2025-07-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2025-08-regular": {
+    "games": 127,
+    "game_days": 27,
+    "cancelled_like_rows": 7,
+    "raw_rows": 135
+  },
+  "2025-08-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2025-09-regular": {
+    "games": 91,
+    "game_days": 28,
+    "cancelled_like_rows": 15,
+    "raw_rows": 108
+  },
+  "2025-09-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2025-10-regular": {
+    "games": 7,
+    "game_days": 4,
+    "cancelled_like_rows": 2,
+    "raw_rows": 9
+  },
+  "2025-10-postseason": {
+    "games": 16,
+    "game_days": 16,
+    "cancelled_like_rows": 0,
+    "raw_rows": 23
+  },
+  "2025-11-regular": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2025-11-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2025-12-regular": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  },
+  "2025-12-postseason": {
+    "games": 0,
+    "game_days": 0,
+    "cancelled_like_rows": 0,
+    "raw_rows": 0
+  }
+}

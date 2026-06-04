@@ -1,0 +1,75 @@
+Milestone 4: AI Integration Design
+Target Supply Chain: OB Brewery - Cass family (Cass Fresh / Cass Light / Cass 0.0) brewing operations
+Team 4: 나태양, 유재호, 윤채리, 이대희, 최지안
+1. Why AI-2
+Of the three AI opportunities identified in M3, AI-2 is selected for three reasons.
+Breadth: AI-2 sits at the most leveraged decision point in the chain - fermentation tank SKU allocation. Both M3 scenarios route through this decision: Scenario 1 recovery requires deciding which SKUs to deprioritize during reduced capacity, and Scenario 2 prevention requires getting allocation right 2-4 weeks ahead of the spike. AI-1 improves filtration locally without changing any allocation decision; AI-3 acts downstream of forecasting.
+Controllability: AI-2 runs on data OB Brewery already controls (internal sales/shipments + public weather/event data); no external dependency can block deployment, unlike AI-3 which requires partner data-sharing agreements.
+Sequencing: Deploying AI-2 first generates measurable forecasting improvement, which becomes negotiation leverage for the partner agreements AI-3 later requires.
+2. How the AI Works Within the Workflow
+2.1 Inputs, outputs, and cadence
+Inputs are refreshed daily.
+Internal: historical sales/shipments by SKU and channel, current SKU-level inventory at DC and wholesaler tier, current fermentation tank state, historical forecast errors by SKU and lead-time horizon.
+External: 14-day weather forecasts (KMA) by region, sports/event calendars (KBO, K-League, FIFA, holidays), promotion schedules.
+Outputs are three calibrated predictions feeding three downstream decisions:
+(i) a SKU × region × day demand forecast over a 28-day horizon, emitted as point estimate + 80% / 95% prediction intervals;
+(ii) a recommended tank allocation plan for the next 7 fermentation starts, optimized for expected service level given current inventory and forecast intervals;
+(iii) per-account recommended replenishment quantities for wholesalers.
+Cadence: forecasts refresh daily at 06:00 KST; tank allocations are formally committed weekly (Wednesdays); DC safety stock is reviewed daily; an alert fires whenever any forecast moves outside its previous-day 80% interval. This rhythm matches Scenario 2's threat profile, where spikes develop over days but the 17-day fermentation lead time defines the high-value response window.
+2.2 Three integration branches
+Branch
+Decision
+Automation level
+Rationale
+1. Tank allocation
+HQ Production Planner approves AI's weekly allocation plan
+Full human approval required
+17-day commit is irreversible
+2. DC safety stock
+DC Inventory Manager: ±15% auto-applied; ±15–30% needs approval; >±30% escalates to HQ planner
+Bounded automation
+Daily adjustments are reversible
+3. Wholesaler recommendation
+Sales team relays AI's recommended order quantities + regional forecast to wholesalers; wholesalers decide
+Pure advisory
+External decision authority
+2.3 Handling forecast uncertainty
+The model never emits point forecasts alone. Three mechanisms operationalize uncertainty:
+(i) interval-aware allocation - Branch 1's optimizer maximizes expected service level under the worst-case end of the 80% prediction interval, so wider intervals automatically produce more conservative allocation;
+(ii) high-uncertainty escalation - when predicted variance exceeds historical baseline, the recommendation routes to a human planner regardless of branch.
+(iii) event-holdout backtesting - performance is reported separately for routine vs. high-stress periods, so degradation during events cannot hide behind aggregate accuracy.
+3. Before / After Workflow Comparison
+Stage
+Before (current)
+After (AI-integrated)
+Data
+Internal shipments only, weekly aggregation
+Internal + external (weather, events, promotions), daily ingestion 06:00 KST
+Forecasting
+Statistical method (moving average + seasonal index), point forecast
+Multivariate model, SKU × region × day with 80% / 95% prediction intervals over 28-day horizon
+Forecast adjustment
+Planner manually adjusts using tacit knowledge and ad-hoc news scanning
+AI recommendation with explicit rationale, intervals, and sensitivity scores
+Tank allocation [H-AI interaction]
+Planner assigns SKUs based on adjusted forecast
+Planner approves/modifies AI's interval-aware allocation; weekly Wednesday commit
+Safety stock [H-AI interaction]
+Fixed rule per SKU, quarterly review
+Daily forecast-driven targets within bounded envelope (±15% auto, ±15–30% approval, >±30% escalation)
+Wholesaler ordering [H-AI interaction]
+Wholesalers order on internal demand estimate (no shared reference)
+Sales team relays AI's recommended quantities + forecast as weekly advisory; daily updates during spike windows
+Exception handling
+None — issues surface as stockouts or excess
+Forecast drift alerts (outside 80% interval) and variance alerts trigger immediate planner review
+The three stages marked [H-AI interaction] are where decision authority transfers between AI and human. The AI provides recommendation + intervals + rationale; the human applies judgement with authority proportional to the decision's reversibility.
+4. How This Integration Mitigates M3 Risks
+Scenario 1 - Tank contamination (Process Risk). When two tanks are lost, Branch 1's interval-aware allocation reallocates the remaining tanks to maximize expected service level - naturally biased toward conservative choices because volatility widens the intervals. Branch 2 simultaneously raises DC safety stock for the affected SKU within the bounded envelope, buffering the 3-week recovery lag.
+Scenario 2 - Heat wave + World Cup surge (Demand × Coordination Risk). Demand side: the multi-source forecast detects the surge 2-4 weeks early because weather and sports calendars enter the model directly. Branch 1 pre-allocates fermentation capacity toward Cass Fresh; Branch 2 raises DC safety stock ahead of the spike. The anticipatory build that M3 identified as the structural fix becomes operationally possible because the forecast provides the lead-time signal. Coordination side: Branch 3 distributes the forecast and recommended quantities to wholesalers before the spike. Wholesalers that adopt the recommendation order against the actual retail signal rather than placing defensive over-orders, reducing bullwhip amplification.
+Residual risks. Supply Risk, Environmental Risk, and Process Risk prevention remain outside this integration's scope and require separate measures (supplier hedging, regulatory monitoring, AI-1 deployment respectively). AI-2 is a high-leverage intervention, not a universal solution.
+5. Implementation Risks and Safeguards
+Three concrete risks could degrade the integration in practice, each with a substantive safeguard.
+(i) Rare-event undertraining - World Cup-class events are rare in training data, risking confident-but-wrong predictions; the safeguard is the high-uncertainty escalation in §2.3, routing to human planners when predicted variance exceeds historical baseline.
+(ii) Planner over-trust or under-trust - the safeguard is the rationale-and-interval display in Branch 1, making decisions auditable so both failure modes are detectable retrospectively against realized outcomes.
+(iii) Data quality degradation - the safeguard is continuous monitoring of input distribution drift, not just output accuracy; data-quality problems are detected at the contract layer (data SLAs, ingestion validation), not papered over with fallback heuristics that silently substitute synthetic values.

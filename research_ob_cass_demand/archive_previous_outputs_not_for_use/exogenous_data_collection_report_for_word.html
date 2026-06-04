@@ -1,0 +1,239 @@
+<!doctype html><html><head><meta charset='utf-8'>
+<style>
+body{font-family:'Noto Sans CJK KR','Malgun Gothic',sans-serif;line-height:1.55;font-size:11pt;margin:28px;}
+h1,h2,h3{color:#1f3a5f;}
+h1{font-size:20pt;} h2{font-size:15pt;margin-top:20px;} h3{font-size:12.5pt;margin-top:14px;}
+p{margin:7px 0;} ul,ol{margin:6px 0 8px 22px;} code{font-family:'Liberation Mono',monospace;background:#f4f4f4;padding:1px 3px;} pre{background:#f4f4f4;padding:10px;white-space:pre-wrap;} table{border-collapse:collapse;width:100%;margin:10px 0;} th,td{border:1px solid #bbb;padding:6px 8px;vertical-align:top;} th{background:#eaf0f7;}
+</style></head><body>
+<h1>Cass 수요예측 외생변수 데이터 수집 보고서</h1>
+<p>작성일: 2026-05-28  </p>
+<p>프로젝트: IMEN343 생산운영관리 — OB맥주 Cass 제품군 AI 수요예측 및 생산운영 최적화</p>
+<p>---</p>
+<h2>1. 목적</h2>
+<p>기존 수요 데이터셋은 월별 맥주/저칼로리 맥주/논알콜 맥주 수요 proxy를 제공하지만, 수요예측 모델의 성능을 높이기 위해서는 수요를 설명하는 외생변수가 필요하다. 본 단계에서는 맥주 수요에 영향을 줄 수 있는 날씨, 이벤트, 뉴스, 가격·경제 데이터를 최대한 수집하고, 모델에 투입 가능한 월별 수치형 변수로 변환했다.</p>
+<p>최종 산출물은 다음 파일이다.</p>
+<pre>
+data/final_cass_demand_model_dataset_with_exogenous_2020_2025.csv
+
+</pre>
+<ul>
+<li>기간: 2020-01 ~ 2025-12</li>
+<li>주기: 월별</li>
+<li>행 수: 72개월</li>
+<li>컬럼 수: 176개</li>
+<li>포함 범위: 수요 proxy + 날씨/환경 + 축제/스포츠/공휴일 + 뉴스/비정형 + 가격/경제</li>
+</ul>
+<p>---</p>
+<h2>2. 수집 전략</h2>
+<p>외생변수는 다음 네 축으로 나누어 수집했다.</p>
+<table>
+<tr><th>축</th><th>수집 내용</th><th>수요예측상 의미</th></tr>
+<tr><td>날씨·환경</td><td>기온, 습도, 체감온도, 강수, 풍속, 일사, 폭염, 열대야, 한파, 대기질</td><td>맥주 소비의 계절성, 더위 수요, 야외활동 영향</td></tr>
+<tr><td>이벤트·캘린더</td><td>공휴일, 연휴, KBO 경기, 올림픽/월드컵/아시안게임, 지역축제, 맥주축제</td><td>모임, 관람, 관광, 외식 수요 proxy</td></tr>
+<tr><td>뉴스·비정형</td><td>맥주, Cass/OB, 무알콜, 폭염/맥주, 축제/맥주, 규제/가격/건강 뉴스 수</td><td>이슈 강도, 브랜드 노출, 소비 트렌드 proxy</td></tr>
+<tr><td>가격·경제</td><td>수입맥주 단가, 가격 검색량, CPI proxy, 가격 인상 이벤트</td><td>가격 민감도, 비용 압력, 소비심리 proxy</td></tr>
+</table>
+<p>---</p>
+<h2>3. 날씨·환경 데이터</h2>
+<h3>3.1 산출 파일</h3>
+<pre>
+data/exog_weather_environment_monthly.csv
+
+</pre>
+<ul>
+<li>72행, 68컬럼</li>
+<li>결측 없음</li>
+<li>서울 기준 월별 데이터</li>
+</ul>
+<h3>3.2 원천</h3>
+<ul>
+<li>Open-Meteo Historical Weather API</li>
+<li>서울 중심 좌표: 37.5665, 126.9780</li>
+<li>기온, 습도, 체감온도, 강수, 풍속, 일사 등</li>
+<li>서울 열린데이터광장 MonthlyAverageAirQuality</li>
+<li>중구 측정소 월평균 PM10, PM2.5, NO2, O3, CO, SO2</li>
+</ul>
+<h3>3.3 수치화 변수 예시</h3>
+<table>
+<tr><th>변수</th><th>의미</th><th>모델링 해석</th></tr>
+<tr><td><code>seoul_avg_temp_c</code></td><td>월평균기온</td><td>기본 더위 수요</td></tr>
+<tr><td><code>seoul_avg_apparent_temp_c</code></td><td>월평균 체감온도</td><td>습도·풍속을 반영한 실제 더위</td></tr>
+<tr><td><code>seoul_relative_humidity_mean_pct</code></td><td>평균 습도</td><td>불쾌지수/체감더위 보완</td></tr>
+<tr><td><code>seoul_precipitation_mm</code></td><td>월강수량</td><td>야외활동 감소 또는 채널 변화</td></tr>
+<tr><td><code>seoul_hot_days_30c</code></td><td>30℃ 이상 일수</td><td>맥주 피크 수요 proxy</td></tr>
+<tr><td><code>seoul_heatwave_warning_days_33c</code></td><td>33℃ 이상 일수</td><td>폭염 proxy</td></tr>
+<tr><td><code>seoul_tropical_nights_25c</code></td><td>열대야 proxy</td><td>야간 음주/야식 수요 가능성</td></tr>
+<tr><td><code>seoul_pm25_ug_m3</code></td><td>초미세먼지</td><td>야외활동 위축 가능성</td></tr>
+</table>
+<h3>3.4 Caveat</h3>
+<ul>
+<li>Open-Meteo는 공식 ASOS 원관측이 아니라 격자형 archive다.</li>
+<li>폭염/열대야/한파는 공식 특보가 아니라 threshold 기반 proxy다.</li>
+<li>대기질은 서울 전체 평균이 아니라 중구 측정소를 서울 도심 proxy로 사용했다.</li>
+</ul>
+<p>---</p>
+<h2>4. 이벤트·캘린더 데이터</h2>
+<h3>4.1 산출 파일</h3>
+<pre>
+data/exog_events_calendar_monthly.csv
+
+</pre>
+<ul>
+<li>72행, 33컬럼</li>
+<li>결측 없음</li>
+</ul>
+<h3>4.2 원천</h3>
+<ul>
+<li>문화체육관광부 지역축제 정보 2020~2025 ZIP/XLSX</li>
+<li>KBO 공식 Schedule.asmx API</li>
+<li>한국 공휴일 규칙 <code>holidays.KR(observed=True)</code></li>
+<li>올림픽, 월드컵, 아시안게임 공식 개최기간 수동 규칙화</li>
+</ul>
+<h3>4.3 수치화 변수 예시</h3>
+<table>
+<tr><th>변수</th><th>의미</th><th>모델링 해석</th></tr>
+<tr><td><code>public_holiday_count_kr</code></td><td>월별 공휴일 수</td><td>여행·모임·외식 수요</td></tr>
+<tr><td><code>longest_consecutive_nonwork_days</code></td><td>최장 연휴 길이</td><td>설/추석/대체휴일 효과</td></tr>
+<tr><td><code>kbo_regular_games</code></td><td>KBO 정규시즌 경기 수</td><td>치맥·야식·관람 수요 proxy</td></tr>
+<tr><td><code>kbo_postseason_games</code></td><td>KBO 포스트시즌 경기 수</td><td>가을야구 이벤트 효과</td></tr>
+<tr><td><code>sports_major_event_days</code></td><td>대형 스포츠 이벤트 일수</td><td>월드컵/올림픽 관람 수요</td></tr>
+<tr><td><code>regional_festival_offline_or_hybrid_count</code></td><td>오프라인/혼합 지역축제 수</td><td>야외 행사·관광 수요</td></tr>
+<tr><td><code>beer_festival_offline_or_hybrid_count_keyword</code></td><td>맥주/비어/치맥 키워드 축제 수</td><td>맥주 직접 이벤트 proxy</td></tr>
+</table>
+<h3>4.4 검증</h3>
+<ul>
+<li>CSV 범위: 2020-01 ~ 2025-12</li>
+<li>KBO 정규시즌 합계는 2020~2025 각 연도 720경기로 검증됨</li>
+</ul>
+<h3>4.5 Caveat</h3>
+<ul>
+<li>지역축제는 계획 자료 기준이므로 실제 취소/변경 가능성이 있다.</li>
+<li>2020~2021년은 COVID-19로 온라인/취소 축제가 많아 오프라인/혼합 변수를 함께 보는 것이 안전하다.</li>
+</ul>
+<p>---</p>
+<h2>5. 뉴스·비정형 데이터</h2>
+<h3>5.1 산출 파일</h3>
+<pre>
+data/exog_news_unstructured_monthly.csv
+
+data/exog_news_unstructured_articles_sample.csv
+
+</pre>
+<ul>
+<li>월별 집계: 72행, 26컬럼</li>
+<li>원천 기사 sample: 최대 5,000개 행</li>
+<li>Google News RSS 캐시 기반 총 21,144건의 기사 항목을 월별·카테고리별로 집계</li>
+</ul>
+<h3>5.2 검색 카테고리</h3>
+<table>
+<tr><th>변수</th><th>검색 주제</th><th>모델링 해석</th></tr>
+<tr><td><code>news_beer_general_count</code></td><td>맥주 일반</td><td>시장 전반 이슈량</td></tr>
+<tr><td><code>news_cass_ob_count</code></td><td>Cass/OB맥주</td><td>브랜드 노출/캠페인/기업 이슈</td></tr>
+<tr><td><code>news_nonalc_count</code></td><td>무알콜/논알콜 맥주</td><td>건강·절주 트렌드</td></tr>
+<tr><td><code>news_weather_demand_count</code></td><td>폭염/날씨/맥주/음료</td><td>날씨 기반 음료 수요 이슈</td></tr>
+<tr><td><code>news_festival_beer_count</code></td><td>축제/맥주축제/페스티벌</td><td>행사 기반 소비 이슈</td></tr>
+<tr><td><code>news_regulation_health_price_count</code></td><td>규제/주세/가격/건강/절주</td><td>수요 억제 또는 대체소비 이슈</td></tr>
+</table>
+<h3>5.3 감성/키워드 수치화</h3>
+<p>뉴스 제목에서 단순 키워드 count를 사용했다.</p>
+<ul>
+<li>긍정 키워드 예: 인기, 성장, 증가, 급증, 호조, 흥행, 출시, 1위, 확대</li>
+<li>부정 키워드 예: 감소, 하락, 부진, 위축, 침체, 논란, 규제, 가격인상, 불매, 관세</li>
+<li><code>news_sentiment_balance_proxy = 긍정 키워드 count - 부정 키워드 count</code></li>
+</ul>
+<h3>5.4 Caveat</h3>
+<ul>
+<li>기사 수는 Google News RSS 검색 결과 기준이며 전체 언론 보도량이 아니다.</li>
+<li>감성은 제목 기반 단순 키워드 방식이므로 정교한 NLP 감성분석이 아니다.</li>
+<li>그래도 월별 이슈 강도와 브랜드/세그먼트 관심도를 수치화하는 데 유용하다.</li>
+</ul>
+<p>---</p>
+<h2>6. 가격·경제 데이터</h2>
+<h3>6.1 산출 파일</h3>
+<pre>
+data/exog_economic_price_monthly.csv
+
+</pre>
+<ul>
+<li>72행, 15컬럼</li>
+</ul>
+<h3>6.2 원천 및 수치화</h3>
+<table>
+<tr><th>변수</th><th>원천/생성 방식</th><th>모델링 해석</th></tr>
+<tr><td><code>imported_beer_unit_value_usd_per_kg</code></td><td>UN Comtrade HS2203 수입액 / 수입중량</td><td>수입맥주 단가, 프리미엄화, 비용 압력</td></tr>
+<tr><td><code>imported_beer_unit_value_yoy_pct</code></td><td>위 값의 전년동월비</td><td>가격/비용 변화율</td></tr>
+<tr><td><code>google_trends_inflation_m物가</code></td><td>Google Trends <code>물가</code></td><td>소비자 물가 관심도</td></tr>
+<tr><td><code>google_trends_beer_price</code></td><td>Google Trends <code>맥주 가격</code></td><td>맥주 가격 관심도</td></tr>
+<tr><td><code>google_trends_alcohol_price</code></td><td>Google Trends <code>주류 가격</code></td><td>주류 가격 관심도</td></tr>
+<tr><td><code>price_pressure_search_index</code></td><td>가격 관련 검색량 합계</td><td>가격 민감도 proxy</td></tr>
+<tr><td><code>korea_cpi_generated_index_2020_01_100</code></td><td>연간 CPI 상승률 anchor를 월별 평활 분해</td><td>일반 물가 proxy</td></tr>
+<tr><td><code>ob_major_price_increase_event_dummy</code></td><td>2024-04, 2025-04 가격 인상 보도 기반</td><td>가격 인상 충격 더미</td></tr>
+</table>
+<h3>6.3 Caveat</h3>
+<ul>
+<li>KOSIS 주류/맥주 전용 CPI는 동적 표 접근이 불안정해 자동 수집하지 못했다.</li>
+<li>CPI는 실제 월별 CPI가 아니라 연간 CPI 상승률을 월별로 평활화한 proxy다.</li>
+<li>가격 인상 더미는 보도 기반 이벤트 변수로만 해석한다.</li>
+</ul>
+<p>---</p>
+<h2>7. 최종 병합 데이터셋</h2>
+<p>최종 병합 파일:</p>
+<pre>
+data/final_cass_demand_model_dataset_with_exogenous_2020_2025.csv
+
+</pre>
+<p>검증:</p>
+<table>
+<tr><th>항목</th><th>값</th></tr>
+<tr><td>기간</td><td>2020-01 ~ 2025-12</td></tr>
+<tr><td>행 수</td><td>72</td></tr>
+<tr><td>컬럼 수</td><td>176</td></tr>
+<tr><td>날씨 원천 파일</td><td>72개월</td></tr>
+<tr><td>이벤트 원천 파일</td><td>72개월</td></tr>
+<tr><td>뉴스 원천 파일</td><td>72개월</td></tr>
+<tr><td>가격·경제 원천 파일</td><td>72개월</td></tr>
+</table>
+<p>변수 설명 파일:</p>
+<pre>
+data/final_model_variable_dictionary.csv
+
+exogenous_variables_for_model.md
+
+</pre>
+<p>---</p>
+<h2>8. 모델링 활용 방안</h2>
+<h3>8.1 추천 타깃</h3>
+<ul>
+<li>전체 맥주: <code>alcoholic_beer_total_proxy_kl</code></li>
+<li>일반 맥주: <code>regular_beer_excluding_low_calorie_proxy_kl</code></li>
+<li>저칼로리/라이트: <code>low_calorie_light_beer_proxy_kl</code>, <code>cass_light_proxy_kl</code></li>
+<li>논알콜/무알콜: <code>nonalcoholic_beer_proxy_kl</code>, <code>cass_0_0_or_all_zero_proxy_kl</code></li>
+<li>Cass Fresh: <code>cass_fresh_proxy_kl</code></li>
+</ul>
+<h3>8.2 추천 feature set</h3>
+<p>기본 feature:</p>
+<ul>
+<li>날씨: 평균기온, 체감온도, 습도, 폭염일수, 강수량</li>
+<li>캘린더: 주말 수, 공휴일 수, 최장 연휴, 여름 더미</li>
+<li>이벤트: KBO 경기 수, 지역축제 수, 맥주축제 수</li>
+<li>뉴스: 맥주 뉴스 수, Cass/OB 뉴스 수, 무알콜 뉴스 수, 가격/규제 뉴스 수</li>
+<li>가격: 수입맥주 단가, 가격 검색량, 가격 인상 더미</li>
+</ul>
+<h3>8.3 추천 실험 설계</h3>
+<ul>
+<li>Train: 2020-01 ~ 2023-12</li>
+<li>Test: 2024-01 ~ 2024-12</li>
+<li>Scenario/Forecast: 2025-01 ~ 2025-12</li>
+</ul>
+<p>비교 모델:</p>
+<ol>
+<li>Seasonal Naive: 전년 동월값</li>
+<li>SARIMAX: 시계열 + 외생변수</li>
+<li>LightGBM/XGBoost: lag + 날씨/이벤트/뉴스/가격 변수</li>
+</ol>
+<p>발표에서는 “외생변수를 넣었을 때 단순 계절 모델 대비 예측오차가 얼마나 줄어드는가”를 보여주면 AI 수요예측 기회가 가장 명확하게 드러난다.</p>
+<p>---</p>
+<h2>9. 결론</h2>
+<p>본 단계에서는 단순 월별 수요 proxy를 넘어, 맥주 수요를 설명할 수 있는 외생변수 4개 축을 구축했다. 특히 날씨·환경과 이벤트 데이터는 실제 공개자료 기반의 정량 변수이며, 뉴스 데이터는 비정형 정보를 월별 기사 수와 키워드 감성으로 변환했다. 가격·경제 데이터는 일부 생성값을 포함하지만, 수입맥주 단가와 가격 검색량을 함께 사용하여 가격 민감도 proxy로 활용 가능하다.</p>
+<p>최종적으로 생성된 <code>final_cass_demand_model_dataset_with_exogenous_2020_2025.csv</code>는 IMEN343 프로젝트에서 AI 수요예측 모델을 실제로 구현하고, Cass Fresh / Cass Light / Cass 0.0의 생산 믹스 및 병목 공정 운영 의사결정으로 연결하기에 충분한 형태의 모델 입력 데이터셋이다.</p>
+</body></html>

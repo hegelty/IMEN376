@@ -1,0 +1,13 @@
+﻿item,value
+rows,72
+columns,176
+start_month,2020-01
+end_month,2025-12
+weather_source_months,72
+weather_source_columns,68
+events_source_months,72
+events_source_columns,33
+news_source_months,72
+news_source_columns,26
+econ_source_months,72
+econ_source_columns,15

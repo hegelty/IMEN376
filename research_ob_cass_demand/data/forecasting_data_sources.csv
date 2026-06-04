@@ -1,0 +1,13 @@
+﻿category,source,url,variables,recommended_use,caveat
+공식 장기 시계열,e-나라지표/국세청 주류 출고량 현황,https://www.index.go.kr/unity/potal/main/EachDtlPageDetail.do?idx_cd=2824,연간 국내 맥주 출고량 1994~2024,전체 맥주 수요 y 또는 sanity check,브랜드/회사별 구분 없음; 천kL 반올림
+정밀 연간 시계열,KHEPI 절주온 알코올 생산/국세통계연보,https://www.khepi.or.kr/acs/acsStat/result?menuId=MENU00685&tableGubun=DATA040101,2005~2021 kL 단위 맥주 출고량,e-나라지표 보정/검증,동일 원천 재게시; 최신 연도 제한
+무역 프록시,UN Comtrade HS2203,https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=410&period=2023&cmdCode=2203&flowCode=M&partnerCode=0,수입/수출 중량·금액 1994~2024,"수입맥주 경쟁강도, apparent market 계산",중량→부피 근사 필요
+시장 리포트,USDA/FAS South Korea Beer Market Report KS2024-0035,https://www.fas.usda.gov/data/gain/2025/01/south-korea-south-korea-beer-market-report,"2023 Cass 매출 1.52조원, 제품 순위, 수입시장",Cass 단일 브랜드 매출 근거,Company Data 인용; 판매량 아님
+시장 리포트,aT/FIS 2021 맥주 마켓리포트,https://www.atfis.or.kr/,"2015~2019 출고액/출고량, 2019 OB 가정용 소매 매출점유율 52.6%, 채널/패키지 비중","점유율/채널 구조, 평균 출고가 추정","2019 기준, Cass 단일 아님"
+보도/시장조사 인용,닐슨코리아/NielsenIQ 인용 기사,동아일보/매일경제/BusinessKorea 등,Cass Fresh/Light 가정시장 판매량 점유율,제품별 share proxy,"가정시장(off-trade) 기준, 유흥시장 제외"
+검색량,Naver DataLab,https://datalab.naver.com/keyword/trendSearch.naver,카스/카스 라이트/카스 0.0/맥주 검색 ratio,월별 브랜드 관심도 외생변수,절대 검색량 아님; API 키 필요
+검색량,Google Trends,https://trends.google.com/trends/,동일 키워드 주/월별 관심도,브랜드 관심도 외생변수,"상대척도, 키워드 정규화 주의"
+날씨,기상청 ASOS 일자료,https://www.data.go.kr/data/15059093/openapi.do,기온/강수/습도/폭염일수,맥주 수요 계절성 설명변수,API 활용신청 필요
+캘린더,한국천문연구원 특일 정보,https://www.data.go.kr/data/15012690/openapi.do,공휴일/연휴/명절,휴일 수요 설명변수,API 활용신청 필요
+이벤트,KBO 경기일정,https://www.koreabaseball.com/Schedule/Schedule.aspx,경기일/구장/시즌,야구 시즌 맥주 소비 proxy,스크래핑 안정성/약관 확인
+가격,KOSIS 소비자물가지수 맥주/주류,https://kosis.kr/,월별 맥주 CPI/주류 CPI,가격 탄력성/실질수요 보정,통계표 ID/API 키 필요

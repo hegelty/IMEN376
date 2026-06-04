@@ -1,0 +1,47 @@
+Supply Chain Analysis:Cass Beer Brewing Process(Term Project Submission - Milestone 1)
+Team4. 나태양, 유재호, 윤채리, 이대희, 최지안
+1. Target Supply Chain
+The selected supply chain is the beer brewing process of Cass beer.
+This supply chain is characterized by:
+Long lead time (especially fermentation stage)
+High variability in raw material prices (e.g., barley, hops)
+Demand uncertainty influenced by seasonality and market trends
+2. Product & Key Stakeholders
+Product: Beer
+Stakeholders:
+Raw material suppliers (barley, hops providers)
+Manufacturer (brewery company)
+Distributors (logistics & wholesale)
+Retailers (restaurants, convenience stores, bars)
+Consumers
+3. Scope Definition
+Internal Scope:
+Raw material procurement
+Five-stage brewing process
+Inventory management
+External Scope:
+Supply and distribution network
+Regulatory environment (e.g., liquor tax laws)
+Competitors’ marketing strategies
+4. Supply Chain Overview
+Material Flow
+Raw materials (barley, hops) → Brewing process (Work-in-Process) → Finished goods (beer) → Distribution network
+Brewing Process (5 Stages)
+Mashing: Extract sugars by mixing malt with water
+Boiling: Add hops and boil to control flavor and bitterness
+Cooling: Rapidly reduce temperature before yeast addition
+Fermentation: Yeast converts sugar into alcohol
+This stage has the longest lead time and is a potential bottleneck
+Packaging: Carbonation, bottling/canning, and sealing
+Information Flow
+Customer demand data ↔ Demand forecasting ↔ Production scheduling ↔ Supplier ordering
+Financial Flow
+Revenue from beer sales ↔ Costs of raw materials and facility operations
+5. Risk Analysis
+Process Risk:Production errors may lead to large-scale product disposal
+Supply Risk:Fluctuation in raw material prices
+Demand Risk:Uncertain and seasonal demand patterns
+6. AI Opportunities
+Quality Control:AI-based monitoring to detect anomalies and prevent production errors
+Procurement Optimization:AI-driven prediction of raw material prices for strategic sourcing
+Demand Forecasting:Machine learning models to improve demand prediction accuracy

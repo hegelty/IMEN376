@@ -1,0 +1,103 @@
+from pathlib import Path
+import xml.etree.ElementTree as ET
+from email.utils import parsedate_to_datetime
+import csv, re, hashlib
+from collections import defaultdict
+base=Path('/home/hegelty/programming/IMEN343/research_ob_cass_demand')
+cache=base/'data'/'news_rss_cache'
+out=base/'data'/'exog_news_unstructured_monthly.csv'
+
+def month_range(start='2020-01', end='2025-12'):
+    y,m=map(int,start.split('-')); ey,em=map(int,end.split('-'))
+    while (y,m)<=(ey,em):
+        yield f'{y}-{m:02d}'
+        m+=1
+        if m==13: y+=1; m=1
+
+def category(channel_title):
+    t=channel_title
+    if '카스 OR 오비맥주' in t or 'OB Beer' in t or 'Cass)' in t:
+        return 'cass_ob'
+    if '무알콜' in t or '무알코올' in t or '논알콜' in t or 'zero alcohol' in t:
+        return 'nonalc'
+    if '폭염' in t or '무더위' in t or '열대야' in t or '장마' in t:
+        return 'weather_demand'
+    if '축제' in t or '페스티벌' in t or 'beer festival' in t:
+        return 'festival_beer'
+    if '규제' in t or '주세' in t or '가격인상' in t or '절주' in t or '다이어트' in t:
+        return 'regulation_health_price'
+    return 'beer_general'
+
+pos_kw=['인기','성장','증가','급증','호조','흥행','출시','신제품','수상','1위','돌풍','확대','회복','최대','랭크','선정','축제','페스티벌']
+neg_kw=['감소','하락','부진','위축','침체','논란','규제','가격인상','인상','파업','리콜','적자','급락','불매','관세','조사','기소','포탈','취소','폭염','장마','한파']
+health_kw=['무알콜','무알코올','논알콜','비알코올','제로','저칼로리','라이트','다이어트','건강','헬시','절주']
+price_kw=['가격','인상','물가','주세','종량세','관세','비용','원가']
+weather_kw=['폭염','무더위','열대야','장마','날씨','기온','더위','한파']
+event_kw=['축제','페스티벌','월드컵','올림픽','야구','KBO','치맥']
+
+seen=set()
+agg={mo:defaultdict(int) for mo in month_range()}
+raw=[]
+for p in cache.glob('*.xml'):
+    try:
+        text=p.read_text(errors='ignore')
+        root=ET.fromstring(text)
+    except Exception:
+        continue
+    ch_title=root.findtext('./channel/title') or ''
+    cat=category(ch_title)
+    for item in root.findall('.//item'):
+        title=item.findtext('title') or ''
+        link=item.findtext('link') or ''
+        pub=item.findtext('pubDate') or ''
+        try:
+            dt=parsedate_to_datetime(pub)
+            mo=f'{dt.year}-{dt.month:02d}'
+        except Exception:
+            # fallback from channel title after date
+            m=re.search(r'after:(\d{4})-(\d{2})-', ch_title)
+            mo=f'{m.group(1)}-{m.group(2)}' if m else ''
+        if mo not in agg: continue
+        key=(cat, mo, re.sub(r'\s+',' ',title.strip().lower()), link)
+        if key in seen: continue
+        seen.add(key)
+        a=agg[mo]
+        a[f'news_{cat}_count']+=1
+        # content-derived counts per category item
+        low=title.lower()
+        if any(k.lower() in low for k in pos_kw): a[f'news_{cat}_positive_keyword_count']+=1
+        if any(k.lower() in low for k in neg_kw): a[f'news_{cat}_negative_keyword_count']+=1
+        if any(k.lower() in low for k in health_kw): a['news_health_trend_title_count']+=1
+        if any(k.lower() in low for k in price_kw): a['news_price_regulation_title_count']+=1
+        if any(k.lower() in low for k in weather_kw): a['news_weather_title_count']+=1
+        if any(k.lower() in low for k in event_kw): a['news_event_title_count']+=1
+        raw.append({'month':mo,'category':cat,'title':title,'pubDate':pub,'link':link})
+
+cols=['month',
+ 'news_beer_general_count','news_cass_ob_count','news_nonalc_count','news_weather_demand_count','news_festival_beer_count','news_regulation_health_price_count',
+ 'news_beer_general_positive_keyword_count','news_beer_general_negative_keyword_count',
+ 'news_cass_ob_positive_keyword_count','news_cass_ob_negative_keyword_count',
+ 'news_nonalc_positive_keyword_count','news_nonalc_negative_keyword_count',
+ 'news_weather_demand_positive_keyword_count','news_weather_demand_negative_keyword_count',
+ 'news_festival_beer_positive_keyword_count','news_festival_beer_negative_keyword_count',
+ 'news_regulation_health_price_positive_keyword_count','news_regulation_health_price_negative_keyword_count',
+ 'news_health_trend_title_count','news_price_regulation_title_count','news_weather_title_count','news_event_title_count',
+ 'news_total_index','news_sentiment_balance_proxy','news_data_source_note']
+with out.open('w',newline='',encoding='utf-8-sig') as f:
+    w=csv.DictWriter(f,fieldnames=cols); w.writeheader()
+    for mo in month_range():
+        a=agg[mo]
+        row={c:0 for c in cols}; row['month']=mo
+        for c in cols:
+            if c in a: row[c]=a[c]
+        counts=[row[c] for c in cols if c.startswith('news_') and c.endswith('_count') and 'keyword' not in c and c not in ('news_health_trend_title_count','news_price_regulation_title_count','news_weather_title_count','news_event_title_count')]
+        row['news_total_index']=sum(counts)
+        pos=sum(row[c] for c in cols if c.endswith('positive_keyword_count'))
+        neg=sum(row[c] for c in cols if c.endswith('negative_keyword_count'))
+        row['news_sentiment_balance_proxy']=pos-neg
+        row['news_data_source_note']='Google News RSS cache generated by prior collection; monthly article counts by query category; deduplicated within category-month-title-link; keyword sentiment is simple title keyword count proxy.'
+        w.writerow(row)
+raw_out=base/'data'/'exog_news_unstructured_articles_sample.csv'
+with raw_out.open('w',newline='',encoding='utf-8-sig') as f:
+    w=csv.DictWriter(f,fieldnames=['month','category','title','pubDate','link']); w.writeheader(); w.writerows(raw[:5000])
+print('wrote', out, 'months', len(agg), 'articles', len(raw), 'unique', len(seen))

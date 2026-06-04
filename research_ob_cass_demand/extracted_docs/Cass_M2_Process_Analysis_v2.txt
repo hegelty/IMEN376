@@ -1,0 +1,115 @@
+Milestone 2: Supply Chain Structure Modeling & Process Analysis
+Cass / Cass Light / Cass 0.0 Brewing Process
+TEAM4 (나태양, 유재호, 윤채리, 이대희, 최지안)
+Scope
+Strategy
+Main shared resource
+Raw material receipt to matured liquid beer; packaging excluded
+MTS for the Cass family; brewing decisions made before realized demand
+Fermenters and upstream brewing assets can be re-sequenced across variants
+Assumption basis: Plant-level numbers are not public, so the capacities below are structured engineering estimates using one brew batch as the unit of analysis.
+Figure 1. Team process-flow sketch showing the shared brewing line and the fermentation/maturation bottleneck.
+1) Process flow, bottleneck, capacity, utilization, and flow time
+Process logic. All three products share milling/mashing → boiling → cooling → fermentation → maturation. Cass 0.0 then adds de-alcoholization. With fermentation lasting about 14 days and maturation about 3 days, tank occupancy drives system throughput.
+Note: All capacities and inventory choices are structured estimates for milestone discussion, not audited brewery data.
+Stage
+Flow time
+Capacity
+Resource
+Load
+Util.
+Comment
+Milling
+1 h
+8.0/day
+1 mill
+1.20
+15%
+Slack
+Mashing
+4 h
+6.0/day
+1 line
+1.20
+20%
+Not constraining
+Filtration
+2 h
+8.0/day
+1 filter
+1.20
+15%
+Slack
+Boiling/Hopping
+2 h
+12.0/day
+1 kettle
+1.20
+10%
+Slack
+Cooling
+1 h
+24.0/day
+1 cooler
+1.20
+5%
+Slack
+Fermentation
+14 days
+0.071/tank/day
+20 tanks
+1.20
+84%
+Bottleneck
+Maturation
+3 days
+0.333/tank/day
+10 tanks
+1.20
+36%
+Secondary constraint
+Filtration
+1 h
+12.0/day
+1 filter
+1.20
+10%
+Slack
+De-alcoholization
+8 h
+3.0/day
+1 unit
+0.12
+4%
+Cass 0.0 only
+Interpretation. At assumed demand of 1.2 batches/day, fermentation utilization is about 84%, much higher than the rest; therefore fermenter turns determine family-level capacity.
+2) Production strategy, push-pull boundary, and forecasting
+Production strategy. The Cass family is best modeled as MTS because brewing lead time is long, demand is repetitive, and retail service requires immediate availability.
+Push-pull boundary. The push portion includes brewing and tank scheduling up to matured beer; the pull portion begins when downstream channels draw from finished inventory. Because packaging is excluded, the practical boundary is just after maturation (and after de-alcoholization for Cass 0.0).
+Forecasting view. Forecast error is likely smallest for flagship Cass, moderate for Cass Light, and largest for Cass 0.0 because non-alcoholic demand is more promotion-sensitive and less stable.
+3) Inventory mapping and where variability hurts most
+Inventory location
+Type
+Role in chain
+Assessment
+Raw materials
+Cycle + safety
+Supports brew schedule and supplier lead time
+Needed, but not the main constraint
+Pre-fermentation WIP
+Cycle WIP
+Very short unless waiting for a fermenter
+Waiting here means poor tank synchronization
+Fermentation / maturation tanks
+Cycle inventory
+Beer stays 17 days in process
+Dominant inventory investment
+Finished beer at brewery/DC
+Safety + seasonal + pipeline
+Protects service level and transit needs
+Best place to absorb demand variability
+Summer pre-build
+Seasonal
+Build ahead of peak demand
+Most relevant for flagship Cass
+Inventory implication. If the firm wants high shelf availability, safety stock should be concentrated in finished goods rather than increasing fermenter-side WIP. Extra WIP before the bottleneck lengthens flow time without raising output.

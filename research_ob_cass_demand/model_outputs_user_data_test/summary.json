@@ -1,0 +1,60 @@
+{
+  "data_path": "/home/hegelty/programming/IMEN343/research_ob_cass_demand/data/final_cass_demand_model_dataset_with_exogenous_2020_2025.csv",
+  "target": "alcoholic_beer_total_proxy_kl",
+  "n_rows": 72,
+  "train_months": 48,
+  "test_months": 24,
+  "features": [
+    "lag_1",
+    "lag_12",
+    "month_sin_annual",
+    "month_cos_annual",
+    "seoul_avg_temp_c",
+    "seoul_heatwave_warning_days_33c",
+    "seoul_tropical_nights_25c",
+    "public_holiday_count_kr",
+    "kbo_regular_games",
+    "sports_major_event_days",
+    "news_total_index",
+    "news_sentiment_balance_proxy",
+    "imported_beer_unit_value_yoy_pct",
+    "ob_major_price_increase_event_dummy",
+    "is_year_end_nov_dec",
+    "is_summer_peak_jul_aug"
+  ],
+  "selected_alpha": 100.0,
+  "alpha_validation_scores": [
+    {
+      "alpha": 100.0,
+      "validation_MASE": 0.6805243993233973
+    },
+    {
+      "alpha": 1.0,
+      "validation_MASE": 0.6872773032607657
+    },
+    {
+      "alpha": 10.0,
+      "validation_MASE": 0.7436964395357778
+    },
+    {
+      "alpha": 0.1,
+      "validation_MASE": 0.7676266439686198
+    },
+    {
+      "alpha": 0.0,
+      "validation_MASE": 0.8507577413587847
+    }
+  ],
+  "event_months_in_test": [
+    "2024-04",
+    "2024-05",
+    "2024-06",
+    "2024-07",
+    "2024-08",
+    "2025-04",
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08"
+  ]
+}
