@@ -1,0 +1,24 @@
+{
+  "target": "beer_domestic_volume_adjusted_leakage_safe",
+  "google_trends_policy": "Use only t-1 Google Trends values for month t prediction; no contemporaneous GT.",
+  "lagged_google_trends_features": [
+    "google_trends_beer_lag1",
+    "google_trends_imported_beer_lag1",
+    "google_trends_nonalc_beer_lag1",
+    "google_trends_cass_beer_lag1",
+    "google_trends_cass_light_lag1",
+    "google_trends_cass_zero_terms_lag1"
+  ],
+  "models_compared": [
+    "seasonal_naive",
+    "ridge_lagged_gt",
+    "lasso_lagged_gt",
+    "elastic_net_lagged_gt",
+    "random_forest_lagged_gt",
+    "extra_trees_lagged_gt",
+    "gradient_boosting_lagged_gt",
+    "hist_gradient_boosting_lagged_gt",
+    "svr_rbf_lagged_gt",
+    "knn_lagged_gt"
+  ]
+}

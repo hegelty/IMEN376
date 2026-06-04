@@ -1,0 +1,2 @@
+﻿check_item,status,reason
+phase1_sku_demand_rows,BLOCKED,phase1_sku_demand_template.csv has no rows; actual SKU target is required.

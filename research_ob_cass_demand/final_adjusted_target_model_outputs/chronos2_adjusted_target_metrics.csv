@@ -1,0 +1,2 @@
+model,split,n_months,MASE,WAPE,RMSE
+chronos2_adjusted_target,all_test,24,0.8086327869654375,0.05270655281586245,9632.75620580426

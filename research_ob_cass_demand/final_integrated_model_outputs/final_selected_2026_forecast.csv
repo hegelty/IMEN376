@@ -1,0 +1,13 @@
+month,final_selected_model,seasonal_naive_core_prediction,chronos2_covariate_prediction,chronos2_q100,chronos2_q900,recommended_planning_value,planning_rule
+2026-01,seasonal_naive_core__chronos2_risk_overlay,113192.03,115066.33,111647.375,117700.86,117700.86,event_or_high_ai_upper_use_chronos_q90
+2026-02,seasonal_naive_core__chronos2_risk_overlay,113192.03,115163.89,111566.25,117751.58,117751.58,event_or_high_ai_upper_use_chronos_q90
+2026-03,seasonal_naive_core__chronos2_risk_overlay,121376.42,122795.11,118925.64,124884.805,124884.805,event_or_high_ai_upper_use_chronos_q90
+2026-04,seasonal_naive_core__chronos2_risk_overlay,135552.19,135821.34,132203.73,137805.05,137805.05,event_or_high_ai_upper_use_chronos_q90
+2026-05,seasonal_naive_core__chronos2_risk_overlay,151920.97,152441.88,148565.39,154590.12,154590.12,event_or_high_ai_upper_use_chronos_q90
+2026-06,seasonal_naive_core__chronos2_risk_overlay,166096.75,165911.9,160733.83,168429.81,168429.81,event_or_high_ai_upper_use_chronos_q90
+2026-07,seasonal_naive_core__chronos2_risk_overlay,174281.14,173734.06,167194.2,176727.75,176727.75,event_or_high_ai_upper_use_chronos_q90
+2026-08,seasonal_naive_core__chronos2_risk_overlay,174281.14,174322.44,167573.34,177382.47,177382.47,event_or_high_ai_upper_use_chronos_q90
+2026-09,seasonal_naive_core__chronos2_risk_overlay,166096.75,165586.77,160110.08,168424.23,168424.23,event_or_high_ai_upper_use_chronos_q90
+2026-10,seasonal_naive_core__chronos2_risk_overlay,151920.97,151563.86,146980.83,153802.75,153802.75,event_or_high_ai_upper_use_chronos_q90
+2026-11,seasonal_naive_core__chronos2_risk_overlay,135552.19,135224.0,129974.94,137203.78,137203.78,event_or_high_ai_upper_use_chronos_q90
+2026-12,seasonal_naive_core__chronos2_risk_overlay,121376.42,121619.78,116150.78,124263.766,124263.766,event_or_high_ai_upper_use_chronos_q90

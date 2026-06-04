@@ -1,0 +1,6 @@
+﻿requirement_id,dataset,required_for,minimum_grain,status_without_file
+P1-DATA-1,phase1_sku_demand_template.csv,actual SKU-level forecast target,daily SKU x region/channel,BLOCKS_PHASE_1
+P1-DATA-2,phase1_inventory_template.csv,DC safety stock recommendation,daily SKU x DC,PROXY_ONLY
+P1-DATA-3,phase1_tank_state_template.csv,fermentation tank allocation,daily tank/batch state,PROXY_ONLY
+P1-DATA-4,phase1_promotion_calendar_template.csv,promotion-aware covariate forecast,daily SKU x region/channel,COVARIATE_MISSING
+P1-DATA-5,phase1_account_order_template.csv,wholesaler/account advisory order,daily account x SKU,PROXY_ONLY

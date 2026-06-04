@@ -1,0 +1,15 @@
+﻿model,segment,rows,wape,mase,event_reasons
+seasonal_naive,routine,14,0.005146610522654271,0.12422665570452561,routine
+seasonal_naive,event_or_stress,10,0.005146619252614062,0.1511909469005143,"heatwave;heatwave,high_kbo_games;heatwave,tropical_night;heatwave,tropical_night,high_kbo_games;high_kbo_games;price_hike;price_hike,high_kbo_games;tropical_night"
+ets_additive,routine,14,0.017048748105408566,0.4115152976432148,routine
+ets_additive,event_or_stress,10,0.007090986096078291,0.20831012548284436,"heatwave;heatwave,high_kbo_games;heatwave,tropical_night;heatwave,tropical_night,high_kbo_games;high_kbo_games;price_hike;price_hike,high_kbo_games;tropical_night"
+chronos2_univariate,routine,14,0.016158544672614662,0.3900279527458508,routine
+chronos2_univariate,event_or_stress,10,0.005374060799007889,0.15787244033843165,"heatwave;heatwave,high_kbo_games;heatwave,tropical_night;heatwave,tropical_night,high_kbo_games;high_kbo_games;price_hike;price_hike,high_kbo_games;tropical_night"
+chronos2_covariate,routine,14,0.03215391489472709,0.7761172712793225,routine
+chronos2_covariate,event_or_stress,10,0.024267112763658914,0.712888903801386,"heatwave;heatwave,high_kbo_games;heatwave,tropical_night;heatwave,tropical_night,high_kbo_games;high_kbo_games;price_hike;price_hike,high_kbo_games;tropical_night"
+seasonal_naive_rolling,routine,12,0.005213252785348104,0.12231747182073771,routine
+seasonal_naive_rolling,event_or_stress,6,0.005213260648691483,0.16594228313546158,"heatwave;heatwave,tropical_night;heatwave,tropical_night,high_kbo_games;tropical_night"
+ets_additive_rolling,routine,12,0.017664164329687333,0.41445063410427707,routine
+ets_additive_rolling,event_or_stress,6,0.005268870185639156,0.1677123794623197,"heatwave;heatwave,tropical_night;heatwave,tropical_night,high_kbo_games;tropical_night"
+chronos2_rolling,routine,12,0.0060503353057091164,0.14195776585820655,routine
+chronos2_rolling,event_or_stress,6,0.0036456859103646553,0.11604511731300862,"heatwave;heatwave,tropical_night;heatwave,tropical_night,high_kbo_games;tropical_night"

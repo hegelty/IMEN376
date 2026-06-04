@@ -1,0 +1,20 @@
+{
+  "data_path": "/home/hegelty/programming/IMEN343/research_ob_cass_demand/data/final_cass_demand_model_dataset_with_exogenous_2020_2025.csv",
+  "target": "alcoholic_beer_total_proxy_kl",
+  "covariates": [
+    "seoul_avg_temp_c",
+    "seoul_heatwave_warning_days_33c",
+    "seoul_tropical_nights_25c",
+    "kbo_regular_games",
+    "sports_major_event_days",
+    "public_holiday_count_kr",
+    "ob_major_price_increase_event_dummy"
+  ],
+  "train_months": 48,
+  "test_months": 24,
+  "quantiles": [
+    0.1,
+    0.5,
+    0.9
+  ]
+}

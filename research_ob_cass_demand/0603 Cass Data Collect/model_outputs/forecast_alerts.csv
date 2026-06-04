@@ -1,0 +1,13 @@
+﻿month,model,prediction,width80_pct,width95_pct,severity,reasons,recommended_action
+2026-01,chronos2_covariate_projected,115066.328125,0.052608651667618335,0.18074541246251313,HIGH,wide_95_interval,Planner review before fermentation or inventory commitment.
+2026-02,chronos2_covariate_projected,115163.890625,0.05370891944889952,0.18814240140647384,HIGH,wide_95_interval,Planner review before fermentation or inventory commitment.
+2026-03,chronos2_covariate_projected,122795.109375,0.048529327371674896,0.16778597274652252,HIGH,wide_95_interval,Planner review before fermentation or inventory commitment.
+2026-04,chronos2_covariate_projected,135821.34375,0.04124029659366406,0.12982863748172865,NORMAL,none,No escalation.
+2026-05,chronos2_covariate_projected,152441.875,0.03952151844760503,0.12270066049764869,NORMAL,none,No escalation.
+2026-06,chronos2_covariate_projected,165911.90625,0.04638596800523471,0.14241396177677876,HIGH,"wide_95_interval,above_historical_p75",Planner review before fermentation or inventory commitment.
+2026-07,chronos2_covariate_projected,173734.0625,0.054874367972601805,0.15844672802721113,HIGH,"wide_95_interval,above_historical_p90",Planner review before fermentation or inventory commitment.
+2026-08,chronos2_covariate_projected,174322.4375,0.05627000827131046,0.16531757422219387,HIGH,"wide_95_interval,above_historical_p90",Planner review before fermentation or inventory commitment.
+2026-09,chronos2_covariate_projected,165586.765625,0.05021027023879947,0.15654868628635307,HIGH,"wide_95_interval,above_historical_p75",Planner review before fermentation or inventory commitment.
+2026-10,chronos2_covariate_projected,151563.859375,0.04501021485683582,0.14332964230114636,HIGH,wide_95_interval,Planner review before fermentation or inventory commitment.
+2026-11,chronos2_covariate_projected,135224.0,0.053458289578773,0.1793270448478081,HIGH,wide_95_interval,Planner review before fermentation or inventory commitment.
+2026-12,chronos2_covariate_projected,121619.78125,0.06670776983493382,0.23802550109421447,HIGH,wide_95_interval,Planner review before fermentation or inventory commitment.

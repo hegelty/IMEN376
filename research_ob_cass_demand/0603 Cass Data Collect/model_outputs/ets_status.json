@@ -1,0 +1,5 @@
+{
+  "status": "PASS",
+  "reason": "ETS additive baseline ran successfully.",
+  "model": "statsmodels ExponentialSmoothing additive trend/additive seasonality"
+}

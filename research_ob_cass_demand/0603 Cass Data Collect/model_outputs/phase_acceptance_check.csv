@@ -1,0 +1,16 @@
+﻿id,criterion,status,notes
+MVP-1,Pipeline reads monthly CSV without manual column edits,PASS,model runner reads cass_demand_v3_monthly.csv
+MVP-2,Missing Cass Fresh/Light target columns are detected and reported,PASS,readiness warnings include blocked SKU targets
+MVP-3,Proxy/imputed target warning appears before model evaluation,PASS,model_run_summary includes proxy/imputed warning
+MVP-4,Seasonal Naive baseline forecast is generated,PASS,seasonal_naive_forecast.csv generated
+MVP-5,Evaluation report labels metrics as diagnostic only,PASS,model_run_summary labels proxy diagnostics
+MVP-6,No report claims validated SKU-level Cass Fresh/Light performance,PASS,reports explicitly block SKU-level claim
+MVP-7,Output files are reproducible from a single script,PASS,scripts/model_cass_demand.py regenerates model_outputs
+M-1,"Actual, non-synthetic demand target is available",FAIL,current target has imputed/proxy periods
+M-2,Cass Fresh/Light/Cass 0.0 or Cass family target grain is explicitly defined,PASS,SKU target available
+M-3,Seasonal Naive baseline is included,PASS,baseline metrics generated
+M-4,Chronos-2 improves MASE or WAPE vs Seasonal Naive baseline,FAIL,Chronos-2 does not beat Seasonal Naive on proxy diagnostic backtest
+M-5,80% and 95% intervals are reported with empirical coverage,PARTIAL,"coverage is computed, but target is proxy"
+M-6,Event/stress periods are evaluated separately,PARTIAL,"event split exists, but target is proxy"
+M-7,High-uncertainty forecasts trigger human review,PARTIAL,forecast_alerts.csv generated; no external workflow integration
+M-8,Tank allocation recommendations remain approval-based,PARTIAL,tank_allocation_proxy.csv generated; not SKU/tank executable

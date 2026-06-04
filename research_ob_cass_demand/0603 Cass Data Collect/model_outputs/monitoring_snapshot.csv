@@ -1,0 +1,9 @@
+﻿check_item,status,value,threshold,recommended_action
+data_freshness,PASS,2025-12,2025-12,Refresh data collection if latest month is behind expected range.
+required_feature_completeness,PASS,0,0 failed required features,Fix required input columns before trusting model output.
+target_imputation,WARN,36,0 imputed target rows for PRD-grade evaluation,Do not use proxy/imputed target for Phase 1 performance claim.
+forecast_high_alerts,WARN,10,0 high alerts,Review HIGH months before fermentation or inventory commitment.
+phase_acceptance_failures,FAIL,2,0 FAIL rows,Resolve Phase 1 blockers before claiming PRD-grade model readiness.
+best_diagnostic_wape,INFO,chronos2_rolling=0.005078,diagnostic only,"Use as proxy-data diagnostic, not SKU performance claim."
+min_interval_80_coverage,WARN,0.708,>=0.800,Recalibrate intervals if coverage falls below target on actual data.
+target_last12_mean_drift,PASS,0.005000,abs drift < 0.05,Investigate target distribution shift if drift exceeds threshold.

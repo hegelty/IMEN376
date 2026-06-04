@@ -1,0 +1,2 @@
+model,split,n_months,MASE,WAPE,RMSE
+chronos2_user_method,all_test,24,0.38714163210492747,0.016821982514785918,2979.6707689080686

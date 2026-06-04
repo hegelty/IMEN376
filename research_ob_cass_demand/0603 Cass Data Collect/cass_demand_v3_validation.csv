@@ -1,0 +1,10 @@
+﻿check_item,layer,expected,actual,status,notes
+monthly_row_count,all,72,72,PASS,
+prd_layer_a_source,A,NTS 국세통계연보 맥주 국내출고량(수출제외) 2020-2024,"NTS 국세통계연보 국내출고량: 2020=1,566,914, 2021=1,538,968, 2022=1,698,000(실측); 2023 보간; 2024 국내비율 추정; KOSIS DT_1F01012 미접근(API키 불필요)",PARTIAL,"Layer A는 NTS 국내 출고량(수출 제외) 기반. 2020-2022 실측, 2023 보간, 2024-2025 추정. 월별 실측 미달이나 국내 수요 proxy 개선됨."
+official_annual_beer_anchors,A,2020-2025 annual official/estimated anchors,"2020,2021,2022,2024",PARTIAL,2023/2025 미발표로 보간/추정. 2020-2022 NTS 국세통계연보 실측 확인.
+beer_volume_missing,A,0 missing,0,PASS,Filled by annual interpolation/carry-forward and seasonal allocation.
+beer_value_available,A,72 non-null,0,FAIL,KOSIS value bridge not collected.
+layer_b_brand_share_available,B,Cass Fresh/Light shares populated (72 non-null),"fresh_non_null=72, light_non_null=72",PASS,"언론보도 취합 연간 앵커 + 선형보간 적용. 가정용 기준 proxy, aT FIS POS 미수집 한계 명시."
+weather_complete,covariate,72 non-null temp_avg,72,PASS,Open-Meteo used instead of KMA ASOS because API key is unavailable.
+holiday_complete,covariate,72 non-null holiday_days,72,PASS,
+kbo_games_available,covariate,72 non-null,72,PASS,KBO official schedule Ajax endpoint; monthly regular-season unique gameId count.

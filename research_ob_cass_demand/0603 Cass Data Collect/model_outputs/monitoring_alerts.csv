@@ -1,0 +1,5 @@
+﻿check_item,status,value,threshold,recommended_action
+target_imputation,WARN,36,0 imputed target rows for PRD-grade evaluation,Do not use proxy/imputed target for Phase 1 performance claim.
+forecast_high_alerts,WARN,10,0 high alerts,Review HIGH months before fermentation or inventory commitment.
+phase_acceptance_failures,FAIL,2,0 FAIL rows,Resolve Phase 1 blockers before claiming PRD-grade model readiness.
+min_interval_80_coverage,WARN,0.708,>=0.800,Recalibrate intervals if coverage falls below target on actual data.

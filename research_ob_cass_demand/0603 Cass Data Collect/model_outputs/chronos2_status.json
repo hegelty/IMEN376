@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "reason": "Chronos-2 univariate ran successfully.",
+  "covariate_status": "PASS",
+  "covariate_reason": "Chronos-2 covariate-informed run succeeded. Future forecast covariates use historical month-of-year averages and zeroed event dummies.",
+  "covariates": [
+    "temp_avg",
+    "heatwave_days",
+    "tropical_night_days",
+    "kbo_games",
+    "world_cup_dummy",
+    "holiday_days",
+    "ob_price_hike_dummy"
+  ],
+  "rolling_min_train": 36,
+  "rolling_horizon": 3,
+  "rolling_step": 6,
+  "chronos_rolling_rows": 18,
+  "model_id": "amazon/chronos-2",
+  "device_map": "cpu",
+  "source": "https://github.com/amazon-science/chronos-forecasting"
+}

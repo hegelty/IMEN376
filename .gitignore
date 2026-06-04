@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+.venv*/
+venv/
+env/
+
+# Runtime logs
+logs/
+*.log
+*.out.log
+*.err.log
+
+# Local model/cache artifacts
+.hf_cache/
+**/.hf_cache/
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+
+# Local OS/editor noise
+.DS_Store
+Thumbs.db

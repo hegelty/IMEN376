@@ -1,0 +1,22 @@
+﻿column_name,layer,source,unit,frequency,availability,assumption,notes
+month,key,Calendar,-,monthly,known-future,실측,YYYY-MM
+beer_domestic_volume,A,NTS 국세통계연보 맥주 국내출고량(수출제외) https://tasis.nts.go.kr / 절주온 khepi.or.kr,kL,annual -> monthly,known-past,"NTS 국세통계연보 국내출고량(수출제외); 2020-2022 실측, 2023 보간, 2024-2025 추정",PRD 요청 KOSIS 월별 실측 미달; 국내 수요 proxy 개선됨
+beer_value,A,KOSIS DT_1F01012 value — API키 불필요로 미수집,백만원,monthly,known-past,missing,Left blank; value↔volume 가교 미완
+beer_domestic_volume_unit,A,NTS 국세통계연보 맥주 국내출고량(수출제외) https://tasis.nts.go.kr / 절주온 khepi.or.kr,-,monthly,known-past,kL,Unit from NTS table
+beer_domestic_volume_imputed,A,NTS 국세통계연보 맥주 국내출고량(수출제외) https://tasis.nts.go.kr / 절주온 khepi.or.kr,0/1,monthly,known-past,1 for 2023 and 2025,2023 NTS 미발표; 2025 추정
+cass_fresh_share,B,언론보도 취합 연간 앵커(세정일보·한국경제·비즈워치·이코노믹데일리) + 선형보간; 가정용 기준 proxy,%,annual -> monthly,known-past,언론보도 취합 연간 앵커 + 선형보간; 가정용 기준 proxy,aT FIS POS 미수집; 가정용↔전채널 오차 가능
+cass_light_share,B,언론보도 취합 연간 앵커(세정일보·한국경제·비즈워치·이코노믹데일리) + 선형보간; 가정용 기준 proxy,%,annual -> monthly,known-past,언론보도 취합 연간 앵커 + 선형보간; 급성장 추세 반영,aT FIS POS 미수집; 2020-2022 소규모 브랜드로 순위 미공표
+cass_fresh_volume,A×B,Derived: beer_domestic_volume × cass_fresh_share/100,kL,monthly,known-past,파생 계산,Layer A × Layer B proxy; 브랜드 단위 실측 아님
+cass_light_volume,A×B,Derived: beer_domestic_volume × cass_light_share/100,kL,monthly,known-past,파생 계산,Layer A × Layer B proxy; 브랜드 단위 실측 아님
+nonalc_market_value,C,data_collection_prd.md scenario anchors,억원,annual -> monthly,known-past,scenario,"2023=590, 2025=2000; intermediate values assumed"
+cass_0_0_scn_base,C,data_collection_prd.md scenario anchors,kL-equiv,monthly,scenario,"15% share, 4,000,000 KRW/kL",Scenario
+cass_0_0_scn_low,C,data_collection_prd.md scenario anchors,kL-equiv,monthly,scenario,"10% share, 4,000,000 KRW/kL",Scenario
+cass_0_0_scn_high,C,data_collection_prd.md scenario anchors,kL-equiv,monthly,scenario,"25% share, 4,000,000 KRW/kL",Scenario
+temp_avg,covariate,Open-Meteo Archive API for Seoul coordinates https://archive-api.open-meteo.com,C,daily -> monthly,known-past,observed,KMA ASOS API key not available
+heatwave_days,covariate,Open-Meteo Archive API for Seoul coordinates https://archive-api.open-meteo.com,days,daily -> monthly,known-past,observed max temp >= 33C,KMA ASOS API key not available
+tropical_night_days,covariate,Open-Meteo Archive API for Seoul coordinates https://archive-api.open-meteo.com,days,daily -> monthly,known-past,observed min temp >= 25C,KMA ASOS API key not available
+kbo_games,covariate,KBO official schedule Ajax endpoint https://www.koreabaseball.com/ws/Schedule.asmx/GetScheduleList,games,monthly,known-future,observed schedule,Regular-season unique gameId count by month
+world_cup_dummy,covariate,FIFA 2022 Qatar schedule,0/1,monthly,known-future,1 for 2022-11 and 2022-12,Manual
+holiday_days,covariate,Static Korea holiday table in scripts/collect_cass_data.py; official API requires data.go.kr key,days,monthly,known-future,static table,Public holiday API key not available
+import_beer_price_yoy,covariate,관세청 수출입통계 수입맥주 연간 수입액 YoY proxy (수입량 미분리); 2020-2024 확인,%,annual -> monthly,lag,수입액 YoY proxy (단가+물량 혼합); 2025 추정,수입단가 정확값 아님; 수입액 YoY를 가격 시그널 proxy로 사용
+ob_price_hike_dummy,covariate,PRD manual event,0/1,monthly,known-future,1 for 2024-04 and 2025-04,Manual

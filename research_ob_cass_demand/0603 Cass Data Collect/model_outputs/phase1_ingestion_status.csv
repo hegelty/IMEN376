@@ -1,0 +1,6 @@
+﻿dataset,exists,row_count,required_columns,missing_columns,status
+phase1_sku_demand_template.csv,True,0,"date,sku,region,channel,actual_demand_kl,shipments_kl,sell_out_kl,stockout_flag,source_system",,EMPTY_TEMPLATE
+phase1_inventory_template.csv,True,0,"date,sku,dc_id,region,inventory_on_hand_kl,safety_stock_kl,inbound_qty_kl,outbound_qty_kl,source_system",,EMPTY_TEMPLATE
+phase1_tank_state_template.csv,True,0,"date,tank_id,sku,fermentation_start_date,planned_release_date,tank_capacity_kl,current_status,batch_id,source_system",,EMPTY_TEMPLATE
+phase1_promotion_calendar_template.csv,True,0,"date,sku,region,channel,promotion_flag,promotion_type,discount_pct,expected_uplift_pct,source_system",,EMPTY_TEMPLATE
+phase1_account_order_template.csv,True,0,"date,account_id,sku,region,channel,recommended_order_kl,actual_order_kl,sales_override_flag,source_system",,EMPTY_TEMPLATE

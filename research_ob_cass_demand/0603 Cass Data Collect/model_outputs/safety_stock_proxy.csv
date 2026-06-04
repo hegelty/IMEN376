@@ -1,0 +1,13 @@
+﻿month,model,forecast_kl,safety_stock_buffer_80_kl,safety_stock_buffer_95_kl,adjustment_pct_vs_forecast,approval_band,recommended_action,limitation
+2026-01,chronos2_covariate_projected,115066.328125,2634.53125,4576.203125,0.022895761887335362,AUTO_OR_LOW_TOUCH,Use 80% interval buffer as advisory safety stock.,Aggregate monthly proxy only; not DC/SKU executable.
+2026-02,chronos2_covariate_projected,115163.890625,2587.6875,5087.6640625,0.022469608190175714,AUTO_OR_LOW_TOUCH,Use 80% interval buffer as advisory safety stock.,Aggregate monthly proxy only; not DC/SKU executable.
+2026-03,chronos2_covariate_projected,122795.109375,2089.6953125,4759.1640625,0.017017740552828918,AUTO_OR_LOW_TOUCH,Use 80% interval buffer as advisory safety stock.,Aggregate monthly proxy only; not DC/SKU executable.
+2026-04,chronos2_covariate_projected,135821.34375,1983.703125,4098.390625,0.014605238545212082,AUTO_OR_LOW_TOUCH,Use 80% interval buffer as advisory safety stock.,Aggregate monthly proxy only; not DC/SKU executable.
+2026-05,chronos2_covariate_projected,152441.875,2148.25,4715.0625,0.014092256474803921,AUTO_OR_LOW_TOUCH,Use 80% interval buffer as advisory safety stock.,Aggregate monthly proxy only; not DC/SKU executable.
+2026-06,chronos2_covariate_projected,165911.90625,2517.90625,6010.703125,0.015176163705852183,AUTO_OR_LOW_TOUCH,Use 80% interval buffer as advisory safety stock.,Aggregate monthly proxy only; not DC/SKU executable.
+2026-07,chronos2_covariate_projected,173734.0625,2993.6875,6840.5,0.017231436696531516,AUTO_OR_LOW_TOUCH,Use 80% interval buffer as advisory safety stock.,Aggregate monthly proxy only; not DC/SKU executable.
+2026-08,chronos2_covariate_projected,174322.4375,3060.03125,6849.8125,0.01755385763235441,AUTO_OR_LOW_TOUCH,Use 80% interval buffer as advisory safety stock.,Aggregate monthly proxy only; not DC/SKU executable.
+2026-09,chronos2_covariate_projected,165586.765625,2837.46875,6601.71875,0.017135842585547813,AUTO_OR_LOW_TOUCH,Use 80% interval buffer as advisory safety stock.,Aggregate monthly proxy only; not DC/SKU executable.
+2026-10,chronos2_covariate_projected,151563.859375,2238.890625,5006.875,0.014771929365169611,AUTO_OR_LOW_TOUCH,Use 80% interval buffer as advisory safety stock.,Aggregate monthly proxy only; not DC/SKU executable.
+2026-11,chronos2_covariate_projected,135224.0,1979.78125,4511.125,0.014640753490504645,AUTO_OR_LOW_TOUCH,Use 80% interval buffer as advisory safety stock.,Aggregate monthly proxy only; not DC/SKU executable.
+2026-12,chronos2_covariate_projected,121619.78125,2643.984375,5916.28125,0.021739756048114088,AUTO_OR_LOW_TOUCH,Use 80% interval buffer as advisory safety stock.,Aggregate monthly proxy only; not DC/SKU executable.
