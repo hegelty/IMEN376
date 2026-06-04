@@ -2,12 +2,23 @@
 __pycache__/
 *.py[cod]
 *$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
 
 # Virtual environments
 .venv/
 .venv*/
 venv/
 env/
+.env
+.env.*
 
 # Runtime logs
 logs/
@@ -15,14 +26,36 @@ logs/
 *.out.log
 *.err.log
 
+# Local Python dependency/vendor folders
+.pydeps_*/
+
+# Jupyter
+.ipynb_checkpoints/
+
 # Local model/cache artifacts
 .hf_cache/
 **/.hf_cache/
+.cache/
+wandb/
+mlruns/
 *.safetensors
 *.ckpt
 *.pt
 *.pth
+*.onnx
+*.pkl
+*.joblib
+*.h5
+*.keras
+
+# Generated presentation/render checks
+final_presentation_ai_package/render_check/
+*_backup.*
+*.bak
 
 # Local OS/editor noise
 .DS_Store
 Thumbs.db
+*.swp
+*.swo
+~$*
